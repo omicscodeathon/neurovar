@@ -8,11 +8,11 @@ Step 2: diseases filetrings
 
 Step 3 : collecting clinical annotation data from the ensemble database
 
-Step 3 : data analysis script development in R
+Step 4 : data analysis script development in R
 
-Step 4 : data visualization script development in R
+Step 5 : data visualization script development in R
 
-Step 5 : shiny app creation
+Step 6 : shiny app creation
 
 ## Part 2 : Desktop application creation
 
