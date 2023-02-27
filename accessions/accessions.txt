@@ -1,90 +1,15 @@
-(1)  PRJNA495603
-SRR7993429
-Control
-SRR7993430
-Control
-SRR7993432
-Control
-SRR7993434
-Control
-SRR7993438
-Control
-SRR7993463
-HAM/TSP
-SRR7993464
-HAM/TSP
-SRR7993465
-HAM/TSP
-SRR7993471
-HAM/TSP
-SRR7993475
-HAM/TSP
+ (*) ALS 
+GSM3172777
+GSM3172778	
+GSM3172779	
+GSM3172780	
+GSM3172781	
+GSM3172782	
+GSM3172783
 
-(2) PRJNA605827
-SRR11058879
-Control
-SRR11058880
-Control
-SRR11058881
-Control
-SRR11058887
-Control
-SRR11058888
-Control
-SRR11058882
-Sjogren's syndrome
-SRR11058883
-Sjogren's syndrome
-SRR11058884
-Sjogren's syndrome
-SRR11058885
-Sjogren's syndrome
-SRR11058886
-Sjogren's syndrome
-
-(3) PRJNA277352
-SRR1839799
-Control
-SRR1839800
-Control
-SRR1839801
-Control
-SRR1839802
-Control
-SRR1839803
-Control
-SRR1839793
-Relapsing-remitting multiple sclerosis
-SRR1839795
-Relapsing-remitting multiple sclerosis
-SRR1839796
-Relapsing-remitting multiple sclerosis
-SRR1839797
-Relapsing-remitting multiple sclerosis
-SRR1839798
-Relapsing-remitting multiple sclerosis
-
-(4) PRJNA294187
-SRR2443246
-Control
-SRR2443247
-Control
-SRR2443252
-Control
-SRR2443254
-Control
-SRR2443255
-Control
-SRR2443150
-Systemic lupus erythematosus
-SRR2443151
-Systemic lupus erythematosus
-SRR2443152
-Systemic lupus erythematosus
-SRR2443154
-Systemic lupus erythematosus
-SRR2443198
-Systemic lupus erythematosus
-
-
-
+ (*) Control
+ 
+GSM3172784
+GSM3172785
+GSM3172786
+GSM3172787

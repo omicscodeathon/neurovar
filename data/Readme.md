@@ -1,18 +1,26 @@
 # Pipeline validation data / Case study
 
-### To validate the pipeline, a case study was performed on four autoimmune demyelinating diseases:
+The dataset from the SRA database was analyzed using the exvar package and visualized using the developed tool.
 
-- Multiple Sclerosis (MS) 
+ ## Accession
+SRA: SRP149638
+BioProject: PRJNA474387
+GEO: GSE115259
 
-- Systemic Lupus Erythematosus (SLE)
+## Pathology
+ALS 
 
-- HTLV-I Associated Myelopathy (HAM)
+##  Cell type/Tissue
+PBMC
 
-- Sjögren's Syndrome
+## Data type
+Fastq 
 
-### Public datasets from the SRA database were analyzed using the developed tool
+## article
+https://pubmed.ncbi.nlm.nih.gov/30720798/
 
-![image](https://user-images.githubusercontent.com/73958439/219356526-a6d25edb-9426-4957-abd2-832fd9a726d5.png)
 
-![image](https://user-images.githubusercontent.com/73958439/219356613-0897b702-2151-40d2-a4b8-fb3647d6a8a0.png)
+
+
+
 
