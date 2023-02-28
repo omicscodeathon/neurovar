@@ -4,6 +4,7 @@
 #source("expression.R")
 #source("discover_gene.R")
 #source("snp.R")
+#source("indel.R")
 ##################
 ui <- bootstrapPage(
   navbarPage(theme = shinytheme("flatly"),
@@ -125,7 +126,7 @@ ui <- bootstrapPage(
                       # output snps
                       h2("Indels in all samples"),
                       h3("Note : You can filter the data using the column"),
-                      box("table2",tableOutput("table_indels"))
+                      box("table2", DT::dataTableOutput("table_indels"))
              )#tab3
     
   ))
@@ -200,14 +201,9 @@ server <- function(input, output, session) {
                            class = "display nowrap compact" # style
   )
  ######################################### tab 4 indels###################################################################
-  #source("process_indels.R")
-  test_table_indels <-data.frame( disease_type=c("1","2"),gene=c("1","2"), chromosome=c("1","2"),
-                                  star=c("1","2"),end=c("1","2"), snp_position=c("1","2"),
-                                  snp_id=c("1","2"),control=c("1","2"),patient=c("1","2"),type=c("1","2"), 
-                                  length=c("1","2"))
-  
-  output$table_indels <- renderTable({
-   test_table_indels
+
+ output$table_indels <- renderDT({
+   annotated_snps5
    })
   
 }
