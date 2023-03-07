@@ -5,7 +5,7 @@ expression_gene_interest2_plus_ontology <- merge(expression_gene_interest2, anno
 annotated_gene_list <- expression_gene_interest2_plus_ontology[,c(1,2,3,4,5,6,7,11,16,18,19,23,25)]
 annotated_gene_list_exp <-unique( annotated_gene_list[,-c(12,13)])
 
-target_gene_annot <-  annotated_gene_list_exp %>% filter( annotated_gene_list_exp$gene =="CACNB4" )
+target_gene_annot <-  annotated_gene_list_exp %>% filter( annotated_gene_list_exp$gene =="TUBA4A" )
 target_gene_annotion <- unique( target_gene_annot[,-c(5,6,7,9,11)])
 # add more info / location
 target_gene_annotion2 <- data.frame(t(target_gene_annotion[-1]))
@@ -15,12 +15,12 @@ colnames(target_gene_annotion2) <- target_gene_annotion[, 1]
 ############################"
 annotated_gene_list_exp <-unique( annotated_gene_list[,-c(12,13)])
 
-target_gene_annot <-  annotated_gene_list_exp %>% filter( annotated_gene_list_exp$gene =="CACNB4" )
+target_gene_annot <-  annotated_gene_list_exp %>% filter( annotated_gene_list_exp$gene =="TUBA4A" )
 target_gene_annot_transcript <- target_gene_annot[,c(9,11)]
 
 ###################"
 #ontology
-target_gene_GO <-  annotated_gene_list %>% filter( annotated_gene_list$gene =="CACNB4" )
+target_gene_GO <-  annotated_gene_list %>% filter( annotated_gene_list$gene =="TUBA4A" )
 target_gene_GO <-target_gene_GO[,c(12,13)]
 target_gene_GO_BP <-  target_gene_GO %>% filter(target_gene_GO$`GO domain` =="biological_process" )
 colnames(target_gene_GO_BP)[2] <- "BP"
