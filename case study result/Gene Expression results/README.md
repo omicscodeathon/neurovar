@@ -1,6 +1,6 @@
 # Biomarkers expression
 
-Using p val 0.05 and logfc 2  we found that:
+Using p val 0.05 and logfc 2 we found that:
 
 only one ALS biomarker is differentially expressed 	: TUBA4A
 
