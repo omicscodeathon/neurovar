@@ -10,6 +10,12 @@ only one ALS biomarker is differentially expressed 	: TUBA4A
 ##Which is a biomarker of:
  amyotrophic lateral sclerosis type 22.
 
+## note
+
+* 20 other biomarkers were expressed but not DE
+
+* 2 biomarkers were not expressed
+
 ## about gene
 
 ![image](https://user-images.githubusercontent.com/73958439/223317875-da9a3656-9bfd-4c20-8a68-bcb049423f65.png)
