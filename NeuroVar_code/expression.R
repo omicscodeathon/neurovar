@@ -1,10 +1,3 @@
-#read  expression data
-
-
-names(expression)[3] <- "gene"
-#filter the gene of interest
-input_gene = "ARSI" #input
-gene_expression <-  expression %>% filter(expression$gene == input_gene)
 
 # expression
 
@@ -23,7 +16,7 @@ expression_gene_interest2 <- expression_gene_interest[,c(1,5,7,8,15,18,21)]
 
 #############"""
 
-#filter annotate gene
+#filter gene
 
 gene_annotation <-  annotation1 %>% filter(annotation1$`Gene name` == input_gene) 
 genes_location <-unique( gene_annotation[c(5,6,7,9)])
