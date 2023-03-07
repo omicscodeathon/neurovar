@@ -1,4 +1,4 @@
-setwd("C:/Users/LENOVO/Desktop/NeuroVar/version2")
+
 library(shinythemes)
 library(shinyWidgets)
 library(shiny)
@@ -18,9 +18,9 @@ library(ggplot2)
 library(readxl)
 library(readr)
 library(sqldf)
+library(bedr)
 ############
 annotation1 <- read_csv("source_data/annotation1.txt")
-annotation2 <- read_csv("source_data/annotation2.txt")
 full_list <- read_excel("source_data/full_list.xlsx")
 expression <- read_csv("demo_data/expressionALS.csv")
 file_paths_control <- fs::dir_ls("demo_data/snp/control")
