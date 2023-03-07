@@ -3,8 +3,9 @@
 #source("disease_gene_code.R")
 #source("expression.R")
 #source("discover_gene.R")
-#source("snp.R")
 #source("indel.R")
+#source("snp.R")
+#source("one_sample_indel.R")
 ##################
 ui <- bootstrapPage(
   navbarPage(theme = shinytheme("simplex"),
