@@ -1,6 +1,5 @@
 ###prepare data
-library(vcfR)
-library(data.table)
+
 #vcf_indel <- read.vcfR("demo_data/indel/control/c1_SRR12878708.vcf.bgz")
 #head(vcf_indel)
 #test <- readVcfFields('demo_data/indel/control/c1_SRR12878708.vcf.bgz', fields=c('CHROM','POS','REF','ALT'))
@@ -9,9 +8,7 @@ library(data.table)
 #df=gunzip("demo_data/indel/patients/p3_SRR12878719.vcf.bgz","demo_data/indel/patients/p3_SRR12878719.vcf")
 
 #########patient
-#path
-file_paths_patients_indel <- fs::dir_ls("demo_data/indel/patients")
-#loop
+
 file_contenets_patients_indel <- list()
 file_contenets_patients_indel <-file_paths_patients_indel %>%
   map(function(path){
@@ -27,15 +24,12 @@ comined_patients_indel <-file_contenets_patients_indel %>% map(as_tibble) %>%
 # delete NAs
 # result : keep commun between all samples
 comined_patients_indel <- na.omit(comined_patients_indel)
-#
 ## identify snps
 comined_patients_indel <- comined_patients_indel[,c(1:5)]
 colnames(comined_patients_indel) <- c("chrom","POS_snp_patient","id_patient","REF_patient","ALT_patient")
 
 ###########"control
-#path
-file_paths_control_indel <- fs::dir_ls("demo_data/indel/control")
-#loop
+
 file_contenets_control_indel <- list()
 file_contenets_control_indel <-file_paths_control_indel %>%
   map(function(path){
@@ -56,9 +50,8 @@ comined_control_indel <- na.omit(comined_control_indel)
 comined_control_indel <- comined_control_indel[,c(1:5)]
 colnames(comined_control_indel) <- c("chrom","POS_snp_control","id_control","REF_control","ALT_control")
 
-
 ## add gene
-##############################################################################################""
+##############################################################################################
 chrom_snppos <- comined_control_indel[,c(1,2)]
 chrom_snppos <-chrom_snppos %>%  mutate_all(funs(str_replace(., "chr", "")))
 names(chrom_snppos)[2] <- "snp_position"
@@ -70,23 +63,23 @@ names(gene_pos)[2] <- "start"
 names(gene_pos)[3] <- "end"
 
 
-annotated_snps = sqldf("
+annotated_indel = sqldf("
   SELECT *
   FROM gene_pos d1 JOIN chrom_snppos d2
   ON d1.chrom = d2.chrom
   AND d2.snp_position < d1.end
   AND d2.snp_position > d1.start
 ")
-annotated_snps <- annotated_snps[,-c(5)]
+annotated_indel<-annotated_indel[,-c(5)]
 #merge with snp info
 comined_control_indel <-comined_control_indel %>%  mutate_all(funs(str_replace(., "chr", "")))
-annotated_snps2 = sqldf("
+annotated_indel2 = sqldf("
   SELECT *
-  FROM annotated_snps d1 JOIN comined_control_indel d2
+  FROM annotated_indel d1 JOIN comined_control_indel d2
   ON d1.chrom = d2.chrom
   AND d1.snp_position = d2.POS_snp_control
 ")
-annotated_snps2 <- annotated_snps2[,-c(5,6)]
+annotated_indel2 <- annotated_indel2[,-c(5,6)]
 ##############################################################################################""
 chrom_snppos <- comined_patients_indel[,c(1,2)]
 chrom_snppos <-chrom_snppos %>%  mutate_all(funs(str_replace(., "chr", "")))
@@ -99,27 +92,27 @@ names(gene_pos)[2] <- "start"
 names(gene_pos)[3] <- "end"
 
 
-annotated_snps3 = sqldf("
+annotated_indel3 = sqldf("
   SELECT *
   FROM gene_pos d1 JOIN chrom_snppos d2
   ON d1.chrom = d2.chrom
   AND d2.snp_position < d1.end
   AND d2.snp_position > d1.start
 ")
-annotated_snps3 <- annotated_snps3[,-c(5)]
+annotated_indel3 <- annotated_indel3[,-c(5)]
 #merge with snp info
 comined_patients_indel <-comined_patients_indel %>%  mutate_all(funs(str_replace(., "chr", "")))
-annotated_snps4 = sqldf("
+annotated_indel4 = sqldf("
   SELECT *
-  FROM annotated_snps d1 JOIN comined_patients_indel d2
+  FROM annotated_indel d1 JOIN comined_patients_indel d2
   ON d1.chrom = d2.chrom
   AND d1.snp_position = d2.POS_snp_patient
 ")
-annotated_snps4 <- annotated_snps4[,-c(5,6)]
-names(annotated_snps4)[4] <- "gene"
-names(annotated_snps2)[4] <- "gene"
-indels_patients <- annotated_snps4
-indels_controls <- annotated_snps2
+annotated_indel4 <- annotated_indel4[,-c(5,6)]
+names(annotated_indel4)[4] <- "gene"
+names(annotated_indel2)[4] <- "gene"
+indels_patients <- annotated_indel4
+indels_controls <-annotated_indel2
 names(indels_patients)[5] <- "snp_position"
 names(indels_controls)[5] <- "snp_position"
 #### Part III: compare groups
@@ -139,23 +132,22 @@ deletion_i <- deletion_i[,-c(9)]
 deletion_i$ALT_patient <- "."
 #
 commun <- compare_group[compare_group$compare == "same",]
-#
 #filter snps in biomarkers
 disease_type_data  <- disease_type_daTa[,c(1,5,7,3)]
 
 names( compare_group_i)[2] <- "gene"
 names( compare_group_i)[3] <- "genes"
 #disease_type_gene3 <- disease_type_gene[,c(1,5,7)]
-annotated_snps5 = sqldf("
+annotated_indel5 = sqldf("
   SELECT *
   FROM compare_group_i d1 JOIN disease_type_data d2
   ON d1.gene = d2.gene
   OR d1.genes = d2.gene
 ")
-annotated_snps5 <- annotated_snps5[,-c(2,3)]
-annotated_snps5 <-  annotated_snps5 %>% 
+annotated_indel5 <- annotated_indel5[,-c(2,3)]
+annotated_indel5 <- annotated_indel5 %>% 
   mutate_all(funs(str_replace(., "no", ".")))
-annotated_snps5<- annotated_snps5 %>% arrange(disease_type)
-annotated_snps5 <- annotated_snps5[,c(13,10,11,12,1:9)]
+annotated_indel5<-annotated_indel5 %>% arrange(disease_type)
+annotated_indel5 <-annotated_indel5[,c(13,10,11,12,1:9)]
 
 

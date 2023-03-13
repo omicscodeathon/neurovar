@@ -2,18 +2,18 @@
 names(annotation1)[9] <- "gene"
 expression_gene_interest2_plus_ontology <- merge(expression_gene_interest2, annotation1,
                                                  by.x = "gene", by.y = "gene")
-annotated_gene_list <- expression_gene_interest2_plus_ontology[,c(1,2,3,4,5,6,7,11,16,18,19,23,25)]
-annotated_gene_list_exp <-unique( annotated_gene_list[,-c(12,13)])
+annotated_gene_list <- expression_gene_interest2_plus_ontology[,c(1:8,12,17,19,20,24,26)]
+annotated_gene_list_exp <-unique( annotated_gene_list[,-c(13,14)])
 
 target_gene_annot <-  annotated_gene_list_exp %>% filter( annotated_gene_list_exp$gene =="TUBA4A" )
-target_gene_annotion <- unique( target_gene_annot[,-c(5,6,7,9,11)])
+target_gene_annotion <- unique( target_gene_annot[,-c(6:8,10,12)])
 # add more info / location
 target_gene_annotion2 <- data.frame(t(target_gene_annotion[-1]))
 colnames(target_gene_annotion2) <- target_gene_annotion[, 1]
 
 
 ############################"
-annotated_gene_list_exp <-unique( annotated_gene_list[,-c(12,13)])
+annotated_gene_list_exp <-unique( annotated_gene_list[,-c(13,14)])
 
 target_gene_annot <-  annotated_gene_list_exp %>% filter( annotated_gene_list_exp$gene =="TUBA4A" )
 target_gene_annot_transcript <- target_gene_annot[,c(9,11)]

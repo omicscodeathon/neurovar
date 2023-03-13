@@ -3,11 +3,11 @@
 #source("disease_gene_code.R")
 #source("expression.R")
 #source("discover_gene.R")
-#source("indel.R")
 #source("snp.R")
+#source("indel.R")
 #source("one_sample_indel.R")
 ##################
-ui <- bootstrapPage(
+ui <- bootstrapPage( 
   navbarPage(theme = shinytheme("simplex"),
              collapsible = TRUE,
              HTML('<a style="text-decoration:none;
@@ -144,7 +144,8 @@ server <- function(input, output, session) {
   })
   #volcano plot
   output$volcano_plot <- renderPlot({
-    ggplot(data=expression_gene_interest, aes(x=log2FoldChange, y=-log10(pvalue), col=diffexpressed)) + geom_point() + theme_minimal()
+    ggplot(data=expression_gene_interest2, aes(x=log2FoldChange, y=-log10(pvalue), col=diffexpressed)) +
+      geom_point() + theme_minimal()
   })
   
   ############################## tab2 ########################################################################
@@ -180,7 +181,7 @@ server <- function(input, output, session) {
   })
   ######################################### tab3 snps ########################################################
 
-  output$table_snps <- renderDT(annotated_snps4,
+  output$table_snps <- renderDT(final_region,
                            filter = "top",
                            class = "display nowrap compact" # style
   )

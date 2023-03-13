@@ -1,8 +1,4 @@
-### indel visualization
-### requirements
-library(bedr)
-library(tidyverse)
-library(ggplot2)
+
 
 ####
 indel_data <- read.vcf("demo_data/indel/patients/p2_SRR12878718.vcf") 
