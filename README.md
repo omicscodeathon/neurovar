@@ -67,9 +67,9 @@ The tool requires gene expression csv files and genetic variants VCF files, in t
 
 ## Operation
 
-The tool is platform independant.
+neurovar is platform independent.
 
-All requirments are installed automatically.
+All requirements are installed automatically.
 
 
 ## Contributors
