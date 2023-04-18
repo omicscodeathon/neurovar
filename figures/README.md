@@ -1,15 +1,14 @@
 # NeuroVar
 
-tab1
+1. Biomarkers 
 
-![image](https://user-images.githubusercontent.com/73958439/223317135-72a5d575-6f11-4da1-9ae0-51b84263e85f.png)
+![image](https://user-images.githubusercontent.com/73958439/232723944-8e5e658e-bbe5-40e7-92d7-f855ae0400aa.png)
 
-tab2
 
-![image](https://user-images.githubusercontent.com/73958439/223317152-b6d8005b-e9ea-49be-bde8-a9333e0db8fb.png)
+2. Expression data visualization
 
-![image](https://user-images.githubusercontent.com/73958439/223317166-fc0b4234-254b-4ae7-a20f-18741e5498ab.png)
+![image](https://user-images.githubusercontent.com/73958439/232724064-e2803d44-4381-408e-b0b7-0a9553b8a16b.png)
 
-tab3
+3. Variant data visualization
 
-![image](https://user-images.githubusercontent.com/73958439/223317175-4d1ff031-cc7f-411d-82f5-ecdf5f9c2c59.png)
+![image](https://user-images.githubusercontent.com/73958439/232724156-3bd91417-89ec-4d1e-a56e-953836a0256b.png)
