@@ -22,5 +22,5 @@ Step 6 : shiny app creation
 
 * electron
 
-* electricShine
+
 
