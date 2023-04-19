@@ -1,20 +1,15 @@
 # NeuroVar: A Genetic Expression and Variation data visualization tool for Neurological diseases’ biomarkers
 
+## Background
+
+The expanding availability of large-scale genomic data and the growing interest in uncovering gene-disease associations call for efficient tools to visualize and evaluate gene expression and genetic variation data.  
+
+## About NeuroVar
 NeuroVar is a novel tool for Visualizing Gene Expression and Genetic Variation data. The tool integrates genetic data proved by multiple scientific researches and the ClinGen database.
 
 The current version includes multiple neurological disorders  and diseases with neurological manifestations, including:
 
-★	Epilepsy
-
-★	amyotrophic lateral sclerosis
-
-★	autism spectrum disorder
-
-★	intellectual disability
-
-★	brain malformation syndrome
-
-★	Syndromic Disorders
+★	Epilepsy   ★	amyotrophic lateral sclerosis  ★	autism spectrum disorder   ★	intellectual disability  ★	brain malformation syndrome  ★	Syndromic Disorders
 
 ★	Cerebral Palsy
 
