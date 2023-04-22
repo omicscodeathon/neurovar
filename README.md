@@ -9,7 +9,7 @@ NeuroVar is a novel tool for visualizing genetic variation (Single nucleotide po
 
 The current version includes multiple neurological disorders  and diseases with neurological manifestations, including:
 
-★	Epilepsy   ★	amyotrophic lateral sclerosis  ★	autism spectrum disorder   ★	intellectual disability  ★	brain malformation syndrome  ★	Syndromic Disorders   ★	Cerebral Palsy   ★	RASopathy    ★	Amnioacidopathy   ★	Peroxisomal disorders   ★	Hereditary cancer   ★	Mitochondrial disease   ★	Retina related disorders  ★	Hearing LossNeuropathy   ★	neurodevelopmental disorder   ★	fragile X syndrome  ★	frontotemporal dementia   ★	glycine encephalopathy   ★	Griscelli syndrome   ★	Joubert syndrome    ★	Microcephaly   ★	neurodevelopmental disorder   ★	neurofibromatosis   ★	Parkinson disease   ★	PHARC syndrome    ★	tuberous sclerosis  ★	neuroblastoma.## Tool development methodology
+★	Epilepsy   ★	amyotrophic lateral sclerosis  ★	autism spectrum disorder   ★	intellectual disability  ★	brain malformation syndrome  ★	Syndromic Disorders   ★	Cerebral Palsy   ★	RASopathy    ★	Amnioacidopathy   ★	Peroxisomal disorders   ★	Hereditary cancer   ★	Mitochondrial disease   ★	Retina related disorders  ★	Hearing LossNeuropathy   ★	neurodevelopmental disorder   ★	fragile X syndrome  ★	frontotemporal dementia   ★	glycine encephalopathy   ★	Griscelli syndrome   ★	Joubert syndrome    ★	Microcephaly   ★	neurodevelopmental disorder   ★	neurofibromatosis   ★	Parkinson disease   ★	PHARC syndrome    ★	tuberous sclerosis  ★	neuroblastoma.
 
 
 ## Tool development methodology
@@ -24,7 +24,7 @@ The shiny app was then transformed into a cross-platform desktop application usi
 ![image](https://user-images.githubusercontent.com/73958439/232723944-8e5e658e-bbe5-40e7-92d7-f855ae0400aa.png)
 
 
-3.Visualize the biomarkers expression profile: 
+2.Visualize the biomarkers expression profile: 
 After importing a CSV file and identifying the key columns, the log2FC value and p-value to define the differential expression profile are requested. The genes’ expression profiles are summarized in a table and represented in a volcano plot.
 
 ![image](https://user-images.githubusercontent.com/73958439/232724064-e2803d44-4381-408e-b0b7-0a9553b8a16b.png)
