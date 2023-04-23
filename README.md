@@ -44,7 +44,7 @@ Note : The files are expected to be divided into two folders, named ''controls''
 
 ## Pipeline Validation / Case study
 
-To validate the pipeline, a case study was performed on the public dataset SRP149638 (36) available on the SRA database (37). The file’s preprocessing, genetic expression analysis, and variant calling were performed using the Exvar R package (38). 
+To validate the pipeline, a case study was performed on the public dataset SRP149638 available on the SRA database. The file’s preprocessing, genetic expression analysis, and variant calling were performed using the Exvar R package. 
 The dataset corresponds to RNA sequencing data (Expression profiling by high throughput sequencing) from the peripheral blood mononuclear cells (PBMC) from healthy donors and Amyotrophic Lateral Sclerosis (ALS) patients.
 The expression analysis shows that only one ALS biomarker is differentially expressed which is TUBA4A gene, a biomarker of ALS type 22. TUBA4A is a protein-coding gene inherited in autosomal dominant mode.
 
