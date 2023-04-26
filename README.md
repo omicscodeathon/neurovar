@@ -2,11 +2,11 @@
 
 ## Table of Contents
 1. [Background](#Background)
-2. [About NeuroVar](#About NeuroVar)
-3. [Implementation and  Operation](#Implementation and  Operation)
+2. [About NeuroVar](#About-NeuroVar)
+3. [Implementation and  Operation](#Implementation-and-Operation)
 4. [Installation](#Installation)
 5. [Usage](#Usage)
-6. [Case study](#ase study)
+6. [Case study](#Case-study)
 7. [Demonstration](#Demonstration)
 8. [License](#License)
 9. [Contact](#Contact)
