@@ -17,7 +17,17 @@ The genes associated with the disease are downloaded from the ClinGen database. 
 The pipeline is developed using the R language and converted into a shiny application using multiple R packages.
 The shiny app was then transformed into a cross-platform desktop application using useing Electron and Node.js.
 
-## Result
+## Implementation and  Operation
+>> Desktop application
+>> Do not require any computational skills to use 
+>> Platform independent
+>> All requirement are installed automatically with the tool
+>> Input :  It requires gene expression CSV files and genetic variants VCF files as inputs.
+Note : The files are expected to be divided into two folders, named ''controls'' and "patients", containing the VCF files of the controls and patients groups respectively.
+
+## Usage
+
+The tool integrates 3 tabs, each for a different functionality,  as explained bellow:
 
 1. First the user select the patient’s disease, next, a list of specific subtypes of the disease with neurological manifestation is provided. More information about each gene is provided including mode of inheritance, description, type, and transcripts. A links for the official online report validating the Gene's association with the disease is also provided. 
 
@@ -36,11 +46,6 @@ The user is requested to define the path to the directory containing the VCF fil
 ![image](https://user-images.githubusercontent.com/73958439/232724156-3bd91417-89ec-4d1e-a56e-953836a0256b.png)
 
 
-
-## Implementation and  Operation
-
-The software is platform-independent. All requirements are installed automatically. It requires gene expression CSV files and genetic variants VCF files as inputs.
-Note : The files are expected to be divided into two folders, named ''controls'' and "patients", containing the VCF files of the controls and patients groups respectively.
 
 ## Pipeline Validation / Case study
 
