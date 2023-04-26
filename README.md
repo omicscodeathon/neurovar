@@ -39,14 +39,15 @@ NeuroVar:
 
 **1 -Download the application**: Download the application file from the [app's website](https://sites.google.com/view/neurovar)                                                           
 **2- Extract the application**: Extract the contents of the downloaded file to a directory of your choice                                                                     
-**3- Install dependencies (for Windows users)**: Install the latest version of the following requirements if your computer does not have them:         
+**3- Install dependencies**: Install the latest version of the following requirements if your computer does not have them:         
 
 - [Python](https://www.python.org/downloads/windows/)
 - [Node.JS](https://nodejs.org/en/download) and npm
-- Chocolatey (Check the box option during the node.js install to install chocolatey)
 - Electron `npm install electron@v23.1.2`
+- [R](https://cran.r-project.org/bin/windows/base/)                                                                         
+The following are only for windows users:
+- Chocolatey (Check the box option during the node.js install to install chocolatey)
 - Innoextract `choco install innoextract`
-- [R](https://cran.r-project.org/bin/windows/base/)
 
 
 ## Usage
