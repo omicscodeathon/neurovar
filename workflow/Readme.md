@@ -12,7 +12,7 @@
 
 - The desktop Application (.exe) was developed using : Node.JS + Electron + Python
 
-![image](https://user-images.githubusercontent.com/73958439/234556815-34cd4140-294c-48ae-a49b-8f931831fae2.png)
+![image](https://user-images.githubusercontent.com/73958439/234557016-845d6c61-359d-4981-8b9f-af99fc1792c6.png)
 
 
 #### Requirements
