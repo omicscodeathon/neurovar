@@ -1,5 +1,18 @@
 # NeuroVar: A Genetic Expression and Variation data visualization tool for Neurological diseases’ biomarkers
 
+## Table of Contents
+1. [Background](#Background)
+2. [About NeuroVar](#About NeuroVar)
+3. [Implementation and  Operation](#Implementation and  Operation)
+4. [Installation](#Installation)
+5. [Usage](#Usage)
+6. [Case study](#ase study)
+7. [Demonstration](#Demonstration)
+8. [License](#License)
+9. [Contact](#Contact)
+10. [Contributors](#Contributors)
+<br>
+
 ## Background
 
 The expanding availability of large-scale genomic data and the growing interest in uncovering gene-disease associations call for efficient tools to visualize and evaluate gene expression and genetic variation data.  
@@ -46,7 +59,7 @@ The user is requested to define the path to the directory containing the VCF fil
 
 ![image](https://user-images.githubusercontent.com/73958439/232724156-3bd91417-89ec-4d1e-a56e-953836a0256b.png)
 
-## Pipeline Validation / Case study
+## Case study
 
 To validate the pipeline, a case study was performed on the public dataset SRP149638 available on the SRA database. The file’s preprocessing, genetic expression analysis, and variant calling were performed using the Exvar R package. 
 The dataset corresponds to RNA sequencing data (Expression profiling by high throughput sequencing) from the peripheral blood mononuclear cells (PBMC) from healthy donors and Amyotrophic Lateral Sclerosis (ALS) patients.
@@ -58,9 +71,8 @@ Demonstration data are provided : https://github.com/omicscodeathon/neurovar/blo
 
 This data will guide you to organize your data correctly and could be used to test the tool.
 
-A step by step case study is provided in : https://sites.google.com/view/neurovar/documentation
 
-## License: 
+## License
 
 Artistic license 2.0 
 
