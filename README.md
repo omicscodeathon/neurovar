@@ -13,9 +13,11 @@ The current version includes multiple neurological disorders  and diseases with 
 
 
 ## Tool development methodology
-The genes associated with the disease are downloaded from the ClinGen database. Multiple neurological disorders and diseases with neurological manifestations were selected.
-The pipeline is developed using the R language and converted into a shiny application using multiple R packages.
-The shiny app was then transformed into a cross-platform desktop application using useing Electron and Node.js.
+* The genes associated with the disease are downloaded from the ClinGen database. Multiple neurological disorders and diseases with neurological manifestations were selected.
+
+* The pipeline is developed using the R language and converted into a shiny application using multiple R packages.
+
+* The shiny app was then transformed into a cross-platform desktop application using useing Electron and Node.js.
 
 ## Implementation and  Operation
 >> Desktop application
@@ -45,8 +47,6 @@ The user is requested to define the path to the directory containing the VCF fil
 
 ![image](https://user-images.githubusercontent.com/73958439/232724156-3bd91417-89ec-4d1e-a56e-953836a0256b.png)
 
-
-
 ## Pipeline Validation / Case study
 
 To validate the pipeline, a case study was performed on the public dataset SRP149638 available on the SRA database. The file’s preprocessing, genetic expression analysis, and variant calling were performed using the Exvar R package. 
@@ -55,6 +55,10 @@ The expression analysis shows that only one ALS biomarker is differentially expr
 
 ## License: 
 Artistic license 2.0 
+
+## Contact 
+
+For issues reporting, please send an email to : bioinformaticstool@gmail.com
 
 ## Contributors
 
