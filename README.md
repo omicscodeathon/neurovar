@@ -37,9 +37,10 @@ NeuroVar:
 
 ## Installation
 
-**Download the application**: Download the application file from the [app's website](https://sites.google.com/view/neurovar)                                                           
-**Extract the application**: Extract the contents of the downloaded file to a directory of your choice                                                                     
-**Install dependencies (for Windows users)**: Install the latest version of the following requirements if your computer does not have them:                                 
+**1 -Download the application**: Download the application file from the [app's website](https://sites.google.com/view/neurovar)                                                           
+**2- Extract the application**: Extract the contents of the downloaded file to a directory of your choice                                                                     
+**3- Install dependencies (for Windows users)**: Install the latest version of the following requirements if your computer does not have them:         
+
 - [Python](https://www.python.org/downloads/windows/)
 - [Node.JS](https://nodejs.org/en/download) and npm
 - Chocolatey (Check the box option during the node.js install to install chocolatey)
