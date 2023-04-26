@@ -16,15 +16,11 @@ The current version includes multiple neurological disorders  and diseases with 
 
 NeuroVar is :
 
->> Desktop application
-
->> Do not require any computational skills to use 
-
->> Platform independent
-
->> All requirement are installed automatically with the tool
-
->> Input :  It requires gene expression CSV files and genetic variants VCF files as inputs.
+- Desktop application
+- Do not require any computational skills to use 
+- Platform independent
+- All requirement are installed automatically with the tool
+- Input :  It requires gene expression CSV files and genetic variants VCF files as inputs.
 
 >> Note : The files are expected to be divided into two folders, named ''controls'' and "patients", containing the VCF files of the controls and patients groups respectively.
 
