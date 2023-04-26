@@ -11,8 +11,8 @@ The current version includes multiple neurological disorders  and diseases with 
 
 ★	Epilepsy   ★	amyotrophic lateral sclerosis  ★	autism spectrum disorder   ★	intellectual disability  ★	brain malformation syndrome  ★	Syndromic Disorders   ★	Cerebral Palsy   ★	RASopathy    ★	Amnioacidopathy   ★	Peroxisomal disorders   ★	Hereditary cancer   ★	Mitochondrial disease   ★	Retina related disorders  ★	Hearing Loss Neuropathy   ★	neurodevelopmental disorder   ★	fragile X syndrome  ★	frontotemporal dementia   ★	glycine encephalopathy   ★	Griscelli syndrome   ★	Joubert syndrome    ★	Microcephaly   ★	neurodevelopmental disorder   ★	neurofibromatosis   ★	Parkinson disease   ★	PHARC syndrome    ★	tuberous sclerosis  ★	neuroblastoma.
 
-
 ## Tool development methodology
+
 * The genes associated with the disease are downloaded from the ClinGen database. Multiple neurological disorders and diseases with neurological manifestations were selected.
 
 * The pipeline is developed using the R language and converted into a shiny application using multiple R packages.
@@ -20,12 +20,24 @@ The current version includes multiple neurological disorders  and diseases with 
 * The shiny app was then transformed into a cross-platform desktop application using useing Electron and Node.js.
 
 ## Implementation and  Operation
+
+NeuroVar is :
+
 >> Desktop application
+
 >> Do not require any computational skills to use 
+
 >> Platform independent
+
 >> All requirement are installed automatically with the tool
+
 >> Input :  It requires gene expression CSV files and genetic variants VCF files as inputs.
-Note : The files are expected to be divided into two folders, named ''controls'' and "patients", containing the VCF files of the controls and patients groups respectively.
+
+>> Note : The files are expected to be divided into two folders, named ''controls'' and "patients", containing the VCF files of the controls and patients groups respectively.
+
+## Installation
+
+The tool could be installed from this website : https://sites.google.com/view/neurovar 
 
 ## Usage
 
@@ -53,7 +65,16 @@ To validate the pipeline, a case study was performed on the public dataset SRP14
 The dataset corresponds to RNA sequencing data (Expression profiling by high throughput sequencing) from the peripheral blood mononuclear cells (PBMC) from healthy donors and Amyotrophic Lateral Sclerosis (ALS) patients.
 The expression analysis shows that only one ALS biomarker is differentially expressed which is TUBA4A gene, a biomarker of ALS type 22. TUBA4A is a protein-coding gene inherited in autosomal dominant mode.
 
+## Demonstration
+
+Demonstration data are provided : https://github.com/omicscodeathon/neurovar/blob/main/demonstration_data.rar
+
+This data will guide you to organize your data correctly and could be used to test the tool.
+
+A step by step case study is provided in : https://sites.google.com/view/neurovar/documentation
+
 ## License: 
+
 Artistic license 2.0 
 
 ## Contact 
