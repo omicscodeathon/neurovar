@@ -1,22 +1,18 @@
-# Tool development Workflow
+# NeuroVar development Workflow
 
-## Part 1 : Shiny app development
+The data was collected from : ClinGen and Ensembl databases
+Neurovar was developed using two Programming Languages : R and Python
+The data analysis script was developed using : Multiple Cran and Bioconductor packages
+The Data visualization Interactive dashboard  was developed using : Shiny package
+The desktop Application (.exe) was developed using : Node.JS + Electron + Python
 
-Step1 : data collection from the ClinGen database
 
-Step 2: diseases filetrings
-
-Step 3 : collecting clinical annotation data from the ensemble database
-
-Step 4 : data analysis script development in R
-
-Step 5 : data visualization script development in R
-
-Step 6 : shiny app creation
-
-## Part 2 : Desktop application creation
 
 #### Requirements
+
+* R
+
+* Pyhton
 
 * NodeJs
 
