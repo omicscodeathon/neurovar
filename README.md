@@ -44,10 +44,7 @@ NeuroVar:
 - [Python](https://www.python.org/downloads/windows/)
 - [Node.JS](https://nodejs.org/en/download) and npm
 - Electron `npm install electron@v23.1.2`
-- [R](https://cran.r-project.org/bin/windows/base/)                                                                         
-The following are only for windows users:
-- Chocolatey (Check the box option during the node.js install to install chocolatey)
-- Innoextract `choco install innoextract`
+- [R](https://cran.r-project.org/bin/windows/base/)                 
 
 
 ## Usage
