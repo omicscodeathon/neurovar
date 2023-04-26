@@ -11,13 +11,6 @@ The current version includes multiple neurological disorders  and diseases with 
 
 ★	Epilepsy   ★	amyotrophic lateral sclerosis  ★	autism spectrum disorder   ★	intellectual disability  ★	brain malformation syndrome  ★	Syndromic Disorders   ★	Cerebral Palsy   ★	RASopathy    ★	Amnioacidopathy   ★	Peroxisomal disorders   ★	Hereditary cancer   ★	Mitochondrial disease   ★	Retina related disorders  ★	Hearing Loss Neuropathy   ★	neurodevelopmental disorder   ★	fragile X syndrome  ★	frontotemporal dementia   ★	glycine encephalopathy   ★	Griscelli syndrome   ★	Joubert syndrome    ★	Microcephaly   ★	neurodevelopmental disorder   ★	neurofibromatosis   ★	Parkinson disease   ★	PHARC syndrome    ★	tuberous sclerosis  ★	neuroblastoma.
 
-## Tool development methodology
-
-* The genes associated with the disease are downloaded from the ClinGen database. Multiple neurological disorders and diseases with neurological manifestations were selected.
-
-* The pipeline is developed using the R language and converted into a shiny application using multiple R packages.
-
-* The shiny app was then transformed into a cross-platform desktop application using useing Electron and Node.js.
 
 ## Implementation and  Operation
 
