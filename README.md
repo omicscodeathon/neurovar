@@ -27,28 +27,28 @@ The current version includes multiple neurological disorders  and diseases with 
 
 ## Implementation and  Operation
 
-NeuroVar is :
+NeuroVar:
 
-- Desktop application
-- Do not require any computational skills to use 
-- Platform independent
-- All requirement are installed automatically with the tool
-- Input :  It requires gene expression CSV files and genetic variants VCF files as inputs.
+- is a desktop application
+- does not require any computational skills to use
+- platform-independent
+- all requirements are installed automatically with the tool
+- input:  NeuroVar requires gene expression CSV files and genetic variants VCF files as inputs.
 
 ## Installation
 
-The tool could be installed from this website : https://sites.google.com/view/neurovar 
+The tool could be installed from this website: https://sites.google.com/view/neurovar
 
 ## Usage
 
 The tool integrates 3 tabs, each for a different functionality,  as explained bellow:
 
-1. First the user select the patient’s disease, next, a list of specific subtypes of the disease with neurological manifestation is provided. More information about each gene is provided including mode of inheritance, description, type, and transcripts. A links for the official online report validating the Gene's association with the disease is also provided. 
+1. First the user select the patient’s disease, next, a list of specific subtypes of the disease with neurological manifestation is provided. More information about each gene is provided including mode of inheritance, description, type, and transcripts. A links for the official online report validating the Gene's association with the disease is also provided.
 
 ![image](https://user-images.githubusercontent.com/73958439/232723944-8e5e658e-bbe5-40e7-92d7-f855ae0400aa.png)
 
 
-2.Visualize the biomarkers expression profile: 
+2.Visualize the biomarkers expression profile:
 After importing a CSV file and identifying the key columns, the log2FC value and p-value to define the differential expression profile are requested. The genes’ expression profiles are summarized in a table and represented in a volcano plot.
 
 ![image](https://user-images.githubusercontent.com/73958439/232724064-e2803d44-4381-408e-b0b7-0a9553b8a16b.png)
@@ -61,22 +61,22 @@ The user is requested to define the path to the directory containing the VCF fil
 
 ## Case study
 
-To validate the pipeline, a case study was performed on the public dataset SRP149638 available on the SRA database. The file’s preprocessing, genetic expression analysis, and variant calling were performed using the Exvar R package. 
+To validate the pipeline, a case study was performed on the public dataset SRP149638 available on the SRA database. The file’s preprocessing, genetic expression analysis, and variant calling were performed using the Exvar R package.
 The dataset corresponds to RNA sequencing data (Expression profiling by high throughput sequencing) from the peripheral blood mononuclear cells (PBMC) from healthy donors and Amyotrophic Lateral Sclerosis (ALS) patients.
 The expression analysis shows that only one ALS biomarker is differentially expressed which is TUBA4A gene, a biomarker of ALS type 22. TUBA4A is a protein-coding gene inherited in autosomal dominant mode.
 
 ## Demonstration
 
-Demonstration data are provided : https://github.com/omicscodeathon/neurovar/blob/main/demonstration_data.rar
+Demonstration data are provided: https://github.com/omicscodeathon/neurovar/blob/main/demonstration_data.rar
 
 This data will guide you to organize your data correctly and could be used to test the tool.
 
 
 ## License
 
-Artistic license 2.0 
+Artistic license 2.0
 
-## Contact 
+## Contact
 
 For issues reporting, please send an email to : bioinformaticstool@gmail.com
 
@@ -86,4 +86,4 @@ Hiba Ben Aribi, UTM, Tunisia  (Developer - Writer).
 
 Najla Abassi, UTM, Tunisia  (Developer - Writer).
 
-Olaitan I. Awe, ASBCB, South Africa.
+Olaitan I. Awe, African Society for Bioinformatics and Computational Biology (ASBCB), South Africa.
