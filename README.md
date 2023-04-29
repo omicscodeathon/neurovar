@@ -47,9 +47,6 @@ The current version includes :
               ★ Fatty Acid Oxidation Disordes
 
 
-
-
-
 ## Implementation and  Operation
 
 NeuroVar is available as a Shiny Application and a desktop appplication.
@@ -63,6 +60,15 @@ NeuroVar is available as a Shiny Application and a desktop appplication.
     - Third party tools requirement: R studio or a online Server
     - Pre-requirements: R  installation
     
+     ### Installation
+
+      **1 -Download the application**: Download the application file from: https://github.com/omicscodeathon/neurovar/tree/main/NeuroVar_Shiny_Application                                                                                                                      
+      **2- Install dependencies**: Install the latest version of R if your computer does not have it:         
+
+      - [R](https://cran.r-project.org/bin/windows/base/)     
+      
+      **3- Setting**: set the shiny app directory as a working directory     
+    
 2. Desktop application
 
     - does not require any computational skills to use
@@ -71,20 +77,19 @@ NeuroVar is available as a Shiny Application and a desktop appplication.
     - Internet requirement: NO
     - Third party tools requirement: NO
     - Pre-requirements: Python  installation
+    
+    ### Installation
 
+      **1 -Download the application**: Download the application file from the [app's website](https://sites.google.com/view/neurovar)                                                           
+      **2- Extract the application**: Extract the contents of the downloaded file to a directory of your choice                                                                     
+      **3- Install dependencies**: Install the latest version of the following requirements if your computer does not have them:         
 
-- input:  NeuroVar requires gene expression CSV files and genetic variants VCF files as inputs.
+      - [Python](https://www.python.org/downloads/windows/)
+      - [R](https://cran.r-project.org/bin/windows/base/)                 
 
-## Installation
+## Inputs 
 
-**1 -Download the application**: Download the application file from the [app's website](https://sites.google.com/view/neurovar)                                                           
-**2- Extract the application**: Extract the contents of the downloaded file to a directory of your choice                                                                     
-**3- Install dependencies**: Install the latest version of the following requirements if your computer does not have them:         
-
-- [Python](https://www.python.org/downloads/windows/)
-- [Node.JS](https://nodejs.org/en/download) and npm
-- Electron `npm install electron@v23.1.2`
-- [R](https://cran.r-project.org/bin/windows/base/)                 
+NeuroVar requires gene expression CSV files and genetic variants VCF files as inputs.
 
 
 ## Usage
