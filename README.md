@@ -31,7 +31,7 @@ The current version includes :
               ★ Syndromic Disorders 
               ★ Cerebral Palsy 
               ★ RASopathy 
-              ★ Amnioacidopathy  
+              ★ Aminoacidopathy 
               ★ CranioFacial Malformations 
               ★ Parkinson disease 
               ★ PHARC syndrome 
