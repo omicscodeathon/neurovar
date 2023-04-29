@@ -52,12 +52,27 @@ The current version includes :
 
 ## Implementation and  Operation
 
-NeuroVar:
+NeuroVar is available as a Shiny Application and a desktop appplication.
 
-- is a desktop application
-- does not require any computational skills to use
-- platform-independent
-- all requirements are installed automatically with the tool
+1. Shiny application
+
+    - does not require any computational skills to use
+    - platform-independent
+    - all dependencies are installed automatically with the tool
+    - Internet requirement: Only if using an online server
+    - Third party tools requirement: R studio or a online Server
+    - Pre-requirements: R  installation
+    
+2. Desktop application
+
+    - does not require any computational skills to use
+    - platform-independent
+    - all dependencies are installed automatically with the tool
+    - Internet requirement: NO
+    - Third party tools requirement: NO
+    - Pre-requirements: Python  installation
+
+
 - input:  NeuroVar requires gene expression CSV files and genetic variants VCF files as inputs.
 
 ## Installation
