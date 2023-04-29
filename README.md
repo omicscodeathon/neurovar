@@ -20,9 +20,34 @@ The expanding availability of large-scale genomic data and the growing interest 
 ## About NeuroVar
 NeuroVar is a novel tool for visualizing genetic variation (Single nucleotide polymorphisms and insertions/deletions) and gene expression data related to neurological diseases. The tool is available as a desktop application that does not require any computational skills to use.
 
-The current version includes multiple neurological disorders  and diseases with neurological manifestations, including:
+The current version includes :
 
-★	Epilepsy   ★	amyotrophic lateral sclerosis  ★	autism spectrum disorder   ★	intellectual disability  ★	brain malformation syndrome  ★	Syndromic Disorders   ★	Cerebral Palsy   ★	RASopathy    ★	Amnioacidopathy   ★	Peroxisomal disorders   ★	Hereditary cancer   ★	Mitochondrial disease   ★	Retina related disorders  ★	Hearing Loss Neuropathy   ★	neurodevelopmental disorder   ★	fragile X syndrome  ★	frontotemporal dementia   ★	glycine encephalopathy   ★	Griscelli syndrome   ★	Joubert syndrome    ★	Microcephaly   ★	neurodevelopmental disorder   ★	neurofibromatosis   ★	Parkinson disease   ★	PHARC syndrome    ★	tuberous sclerosis  ★	neuroblastoma.
+* 11 Neurological Syndromes are integrated, including:
+
+              ★ Epilepsy 
+              ★ Amyotrophic lateral sclerosis 
+              ★ Intellectual disability and Autism spectrum disorder 
+              ★ Brain malformation syndrome 
+              ★ Syndromic Disorders 
+              ★ Cerebral Palsy 
+              ★ RASopathy 
+              ★ Amnioacidopathy  
+              ★ CranioFacial Malformations 
+              ★ Parkinson disease 
+              ★ PHARC syndrome 
+
+* and 7 Non-Neurological diseases with neurological manifestations are integrated, including:
+
+              ★ Peroxisomal disorders  
+              ★ Hereditary cancer 
+              ★ Mitochondrial disease 
+              ★ Retina related disorders 
+              ★ General Gene Curation
+              ★ Hearing Loss 
+              ★ Fatty Acid Oxidation Disordes
+
+
+
 
 
 ## Implementation and  Operation
