@@ -1,8 +1,8 @@
 # NeuroVar development Workflow
 
 - The data was collected from : ClinGen and Ensembl databases
+<img src="https://user-images.githubusercontent.com/73958439/234555452-b129011f-eca2-454b-99d9-44a8f6832231.png" width="100" height="100">
 
-![image](https://user-images.githubusercontent.com/73958439/234555452-b129011f-eca2-454b-99d9-44a8f6832231.png)
 
 - Neurovar was developed using two Programming Languages : R and Python
 - The data analysis script was developed using : Multiple Cran and Bioconductor packages
