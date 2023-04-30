@@ -63,7 +63,7 @@ NeuroVar is available as a Shiny Application and a desktop appplication.
     
      ### Installation
 
-      **1 -Download the application**: Download the application file from: https://github.com/omicscodeathon/neurovar/tree/main/NeuroVar_Shiny_Application                                                                                                                      
+      **1 -Download the application**: Download the application file from [here](https://github.com/omicscodeathon/neurovar/tree/main/NeuroVar_Shiny_Application)                                                                                                                      
       **2- Install dependencies**: Install the latest version of R if your computer does not have it: [R](https://cran.r-project.org/bin/windows/base/)     
       
       **3- Setting**: set the shiny app directory as a working directory     
@@ -121,7 +121,7 @@ The expression analysis shows that only one ALS biomarker is differentially expr
 
 ## Demonstration
 
-Demonstration data are provided: https://github.com/omicscodeathon/neurovar/blob/main/demonstration_data.rar
+Demonstration data are provided [here](https://github.com/omicscodeathon/neurovar/blob/main/demonstration_data.rar)
 
 This data will guide you to organize your data correctly and could be used to test the tool.
 
