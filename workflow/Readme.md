@@ -15,7 +15,9 @@
 ![Diagramme sans nom(1)(1) drawio(2)](https://user-images.githubusercontent.com/112277365/235346096-4782d418-8224-4d54-a163-f732a2a9cb82.png)
 
 **2- wxPython**
-![Diagramme sans nom drawio(1)](https://user-images.githubusercontent.com/112277365/235346016-092294cd-098c-4d31-8870-b1776215e872.png)
+![Diagramme sans nom drawio(1)](https://user-images.githubusercontent.com/112277365/235346016-092294cd-098c-4d31-8870-b1776215e872.png)           
+
+After testing the 2 desktop apps, the Python app showed the optimal performance
 
 
 #### Requirements
