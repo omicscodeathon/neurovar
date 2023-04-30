@@ -10,9 +10,13 @@
 
 ![image](https://user-images.githubusercontent.com/73958439/234556685-3798158b-d916-4af1-920b-486bc4221718.png)
 
-- The desktop Application (.exe) was developed using : Node.JS + Electron + Python
+- The desktop Application (.exe) was developed using two frameworks:                     
+**1- Node.JS + Electron**
 
-![image](https://user-images.githubusercontent.com/73958439/234557016-845d6c61-359d-4981-8b9f-af99fc1792c6.png)
+![image](https://user-images.githubusercontent.com/73958439/234557016-845d6c61-359d-4981-8b9f-af99fc1792c6.png)   
+
+**2- wxPython**
+![Diagramme sans nom drawio(1)](https://user-images.githubusercontent.com/112277365/235346016-092294cd-098c-4d31-8870-b1776215e872.png)
 
 
 #### Requirements
@@ -23,7 +27,7 @@
 
 * NodeJs
 
-* electron
+* Electron
 
 ## How it Works
 
