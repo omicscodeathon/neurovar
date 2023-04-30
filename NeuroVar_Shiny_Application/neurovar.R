@@ -1,5 +1,18 @@
 #requirement
-# existing libraries on "https://www.npmjs.com/"
+if (!require("shiny")) install.packages("shiny")
+if (!require("dplyr")) install.packages("dplyr")
+if (!require("readr")) install.packages("readr")
+if (!require("tidyverse")) install.packages("tidyverse")
+if (!require("purrr")) install.packages("purrr")
+if (!require("vcfR")) install.packages("vcfR")
+if (!require("bslib")) install.packages("bslib")
+if (!require("stringr")) install.packages("stringr")
+#if (!require("ggplot2")) install.packages("ggplot2")
+if (!require("shinydashboard")) install.packages("shinydashboard")
+if (!require("DT")) install.packages("DT")
+if (!require("vcfR")) install.packages("vcfR")
+if (!require("sqldf")) install.packages("sqldf")
+if (!require("fs")) install.packages("fs")
 library(shiny)
 library(dplyr)
 library(readr)
@@ -8,23 +21,16 @@ library(purrr)
 library(vcfR)
 library(bslib)
 library(stringr)
-# mandatory to add libraries that do not exist on "https://www.npmjs.com/"
-library(ggplot2) # could be removed  if we remove volcano plot
+#library(ggplot2)
 library(shinydashboard) 
-library(readxl) # could be removed 
 library(DT)
-library(sqldf) # could be removed 
+library(sqldf)
 library(data.table)
 library(fs)
-# add shinyloader
-
 
 #source data
-#annotation1 <- read_csv("source_data/annotation1.txt") # to later reduce
-#names(annotation1)[9] <- "gene" # to remove
-
-
-full_list <- read_excel("source_data/full_list.xlsx") # replace with csv
+annotation1 <- read_csv("source_data/annotation.txt") 
+full_list <- read_csv("source_data/full_list.csv")
 # app
 ui <- 
   navbarPage(
@@ -112,7 +118,7 @@ ui <-
                  #expression table
                  DT::dataTableOutput("expression"),
                  # volcano
-                 plotOutput(outputId = "volcano_plot")
+                 #plotOutput(outputId = "volcano_plot")
                  
                  
                )
@@ -126,7 +132,7 @@ ui <-
                  actionButton("submit_button", "Submit"),
                ),
                mainPanel(
-                 "comparison",
+                 #"comparison",
                  DTOutput("comined")
                )
              )
@@ -139,7 +145,7 @@ server<- function(input, output,session) {
   
   ###########•"tab1 #############################""
   ################"" UI
-  # disease type  UI >>> ERROR !!!!!!!!!!!!
+
   get_disease_type_list <- function(full_list, input_disease) {
     disease_type_data <- full_list %>% filter(disease == input_disease)
     return(unique(disease_type_data$disease_type))
@@ -156,7 +162,7 @@ server<- function(input, output,session) {
                         selected = NULL)
     }
   })
-  #gene  UI >>> ERROR !!!!!!!!!!!!
+
   get_gene_list <- function(full_list, input_type) {
     gene_data <- full_list %>% filter(disease_type == input_type)
     return(unique(gene_data$gene))
@@ -198,7 +204,7 @@ server<- function(input, output,session) {
     
     ################ show
     output$gene_infos <- DT::renderDataTable({
-      gene_info
+      gene_info <- gene_info[,-c(3,10)]
     })
     output$gene_transs <- DT::renderDataTable({
       gene_trans
@@ -234,7 +240,17 @@ server<- function(input, output,session) {
       expression$expression_profile[expression$logfc  > input$log  & expression$pvalue < input$pval ] <- "Upregulated genes"
       expression$expression_profile[expression$logfc  < -(input$log)  & expression$pvalue < input$pval ] <- "Downregulated genes"
       expression <- expression[,c("gene","pvalue","logfc","expression_profile" )]
-      expression 
+      #expression 
+      # filter biomarkers
+      biom_list <- full_list %>% filter(full_list$`disease`==input$disease_n)
+      biom_list <- biom_list[,c(1)]
+      biom_exp = sqldf("
+            SELECT *
+            FROM  biom_list d1 JOIN expression d2
+            ON d1.gene = d2.gene
+           
+          ")
+      biom_exp <- biom_exp[,-c(1)]
     })
   })
   # volcano plot
@@ -366,8 +382,19 @@ server<- function(input, output,session) {
         names(ann_snps3)[6] <-  "Control's Allele"
         names(ann_snps3)[7] <-"Patient's Allele"
         names(ann_snps3)[2] <- "gene"
-        ann_snps3
+        
+        ann_snps3[ann_snps3 == "no"] <- "."
+        ann_snps3[ann_snps3 == "same"] <- "Population specific"
         # filter biomarkers
+        biom_list <- full_list %>% filter(full_list$`disease`==input$disease_n)
+        biom_list <- biom_list[,c(1)]
+        biom_var = sqldf("
+            SELECT *
+            FROM  biom_list d1 JOIN ann_snps3 d2
+            ON d1.gene = d2.gene
+           
+          ")
+        biom_var <- biom_var[,-c(3)]
       })
       
     } else {
@@ -496,8 +523,23 @@ server<- function(input, output,session) {
         compare_group_i$compare[compare_group_i$ALT_control ==  compare_group_i$ALT_patient ] <- "same"
         compare_group_i$compare[compare_group_i$ALT_control !=  compare_group_i$ALT_patient &  compare_group_i$ALT_control !="no" &compare_group_i$ALT_patient !="no"] <- "different"
         compare_group_i <- compare_group_i[,c(1,5,11,2,6,12,8,13,14,7,15)]
+        compare_group_i[ compare_group_i == "no"] <- "."
         
-        compare_group_i
+        
+         names(compare_group_i)[2] <- "gene1"
+         names(compare_group_i)[3] <- "gene2"
+        # compare_group_i
+        # filter biomarkers
+         biom_list <- full_list %>% filter(full_list$`disease`==input$disease_n)
+         biom_list <- biom_list[,c(1)]
+         biom_var = sqldf("
+            SELECT *
+            FROM  biom_list d1 JOIN compare_group_i d2
+            ON d1.gene = d2.gene1
+            OR d1.gene = d2.gene2
+          ")
+        biom_var <- biom_var[,-c(3,4,6,7)]
+        biom_var
       })
     }
     
