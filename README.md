@@ -8,9 +8,10 @@
 5. [Usage](#Usage)
 6. [Case study](#Case-study)
 7. [Demonstration](#Demonstration)
-8. [License](#License)
-9. [Contact](#Contact)
-10. [Contributors](#Contributors)
+8. [Citation](#Citation)
+9. [License](#License)
+10. [Contact](#Contact)
+11. [Contributors](#Contributors)
 <br>
 
 ### Don't have time to read! Watch the [video](https://youtu.be/aoLq5lzMRog?list=PLkTKVToorl7YckYrT7o6M1kfEHHJYBfGS).
@@ -79,7 +80,7 @@ NeuroVar is available as a Shiny Application and a desktop appplication.
     
     ### Installation
 
-      **1 -Download the application**: Download the application file from the [app's website](https://sites.google.com/view/neurovar)                                                           
+      **1 -Download the application**: Download the application file from the [tool's website](https://sites.google.com/view/neurovar)                                                           
       **2- Extract the application**: Extract the contents of the downloaded file to a directory of your choice                                                                     
       **3- Install dependencies**: Install the latest version of Python if your computer does not have them:  [Python](https://www.python.org/downloads/windows/)            
 
@@ -125,6 +126,9 @@ Demonstration data are provided [here](https://github.com/omicscodeathon/neurova
 
 This data will guide you to organize your data correctly and could be used to test the tool.
 
+## Citation
+
+Hiba Ben Aribi, Najla Abassi and Olaitan I. Awe. NeuroVar: A Genetic Expression and Variation data visualization tool for Neurological diseases’ biomarkers. (2023). https://github.com/omicscodeathon/neurovar
 
 ## License
 
