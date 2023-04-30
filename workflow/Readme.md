@@ -3,6 +3,9 @@
 - The data was collected from : ClinGen and Ensembl databases
 <img src="https://user-images.githubusercontent.com/73958439/234555452-b129011f-eca2-454b-99d9-44a8f6832231.png" width="600" height="500">
 
+<p align="center">
+  <img width="600" height="400" src="[https://www.python.org/python-.png](https://user-images.githubusercontent.com/73958439/234555452-b129011f-eca2-454b-99d9-44a8f6832231.png)">
+</p>
 
 - Neurovar was developed using two Programming Languages : R and Python
 - The data analysis script was developed using : Multiple Cran and Bioconductor packages
