@@ -93,19 +93,24 @@ The tool integrates 3 tabs, each for a different functionality,  as explained be
 
 1. First the user select the patient’s disease, next, a list of specific subtypes of the disease with neurological manifestation is provided. More information about each gene is provided including mode of inheritance, description, type, and transcripts. A links for the official online report validating the Gene's association with the disease is also provided.
 
-![image](https://user-images.githubusercontent.com/73958439/232723944-8e5e658e-bbe5-40e7-92d7-f855ae0400aa.png)
-
+<p align="center">
+<img src="https://user-images.githubusercontent.com/73958439/232723944-8e5e658e-bbe5-40e7-92d7-f855ae0400aa.png" width="600" >
+</p>
 
 2.Visualize the biomarkers expression profile:
 After importing a CSV file and identifying the key columns, the log2FC value and p-value to define the differential expression profile are requested. The genes’ expression profiles are summarized in a table and represented in a volcano plot.
 
-![image](https://user-images.githubusercontent.com/73958439/232724064-e2803d44-4381-408e-b0b7-0a9553b8a16b.png)
-
+<p align="center">
+<img src="https://user-images.githubusercontent.com/73958439/232724064-e2803d44-4381-408e-b0b7-0a9553b8a16b.png" width="600" >
+</p>
 
 3. Visualize SNPs and Indels data:
 The user is requested to define the path to the directory containing the VCF files. The user needs to define the variants type (SNPs or Indels). The VCF files are processed and annotated, and then the variants in the biomarkers are filtered and resumed in a table comparing the reference genome, the controls group and the patients group.
 
-![image](https://user-images.githubusercontent.com/73958439/232724156-3bd91417-89ec-4d1e-a56e-953836a0256b.png)
+<p align="center">
+<img src="https://user-images.githubusercontent.com/73958439/232724156-3bd91417-89ec-4d1e-a56e-953836a0256b.png" width="600" >
+</p>
+
 
 ## Case study
 
