@@ -136,7 +136,7 @@ Artistic license 2.0
 
 ## Contact
 
-For issues reporting, please send an email to : bioinformaticstool@gmail.com
+For issues reporting, please send an email to : hiba.bioinf@gmail.com
 
 ## Contributors
 
