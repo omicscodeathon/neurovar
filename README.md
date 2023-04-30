@@ -13,7 +13,7 @@
 10. [Contributors](#Contributors)
 <br>
 
-## Don't have time to read! Watch the [video](https://youtu.be/aoLq5lzMRog?list=PLkTKVToorl7YckYrT7o6M1kfEHHJYBfGS)
+### Don't have time to read! Watch the [video](https://youtu.be/aoLq5lzMRog?list=PLkTKVToorl7YckYrT7o6M1kfEHHJYBfGS).
 ## Background
 
 The expanding availability of large-scale genomic data and the growing interest in uncovering gene-disease associations call for efficient tools to visualize and evaluate gene expression and genetic variation data.  
