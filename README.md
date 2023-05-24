@@ -10,8 +10,7 @@
 7. [Demonstration](#Demonstration)
 8. [Citation](#Citation)
 9. [License](#License)
-10. [Contact](#Contact)
-11. [Contributors](#Contributors)
+10. [Contributors](#Contributors)
 <br>
 
 ### Don't have time to read! Watch the [video](https://youtu.be/aoLq5lzMRog?list=PLkTKVToorl7YckYrT7o6M1kfEHHJYBfGS).
@@ -80,7 +79,8 @@ NeuroVar is available as a Shiny Application and a desktop appplication.
     
     ### Installation
 
-      **1 -Download the application**: Download the application file from the [tool's website](https://sites.google.com/view/neurovar)                                                           
+      **1 -Download the application**: Download the application file from the [here](https://drive.google.com/file/d/1OfYySsfIaz1vafHFaqlGbLb1tirumIWe/view?usp=sharing)    
+      
       **2- Extract the application**: Extract the contents of the downloaded file to a directory of your choice                                                                     
       **3- Install dependencies**: Install the latest version of Python if your computer does not have them:  [Python](https://www.python.org/downloads/windows/)            
 
@@ -134,9 +134,6 @@ Hiba Ben Aribi, Najla Abassi and Olaitan I. Awe. NeuroVar: A Genetic Expression 
 
 Artistic license 2.0
 
-## Contact
-
-For issues reporting, please send an email to : hiba.bioinf@gmail.com
 
 ## Contributors
 
