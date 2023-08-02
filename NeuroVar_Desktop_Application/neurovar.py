@@ -30,7 +30,7 @@ class TabOne(wx.Panel):
             
             # Create panels
             side_panel = wx.Panel(self)
-            side_panel.SetBackgroundColour('#D3D3D3')
+            side_panel.SetBackgroundColour('#ebebeb')
             main_panel = wx.Panel(self)
             about_gene_panel = wx.Panel(main_panel)
             about_gene_panel.SetBackgroundColour('#FFFFFF')
@@ -82,11 +82,11 @@ class TabOne(wx.Panel):
             self.gene_info_table.SetColLabelValue(3, "Classification")
             self.gene_info_table.SetColLabelValue(4, "Online report")
             self.gene_info_table.SetColLabelValue(5, "Classification date")
-            self.gene_info_table.SetRowSize(0, 50)
+            self.gene_info_table.SetRowSize(0, 35)
             about_gene_sizer.Add(about_gene_label, 0, wx.ALL | wx.RIGHT, 5)
             about_gene_sizer.Add(self.gene_info_table, 1, wx.ALL | wx.RIGHT, 5)
-            self.gene_info_table.AutoSizeColumns()
             about_gene_panel.SetSizerAndFit(about_gene_sizer)
+            self.gene_info_table.AutoSizeColumns()
             
             # create table gene transcripts
             gene_trans_label = wx.StaticText(transcript_panel, label="Gene's transcript")
@@ -106,20 +106,16 @@ class TabOne(wx.Panel):
             self.gene_trans_table.AutoSizeColumns()
             transcript_panel.SetSizerAndFit(transcript_sizer)
             
-            
             # Main sizer to hold all panels
             main_sizer = wx.BoxSizer(wx.VERTICAL)
             main_sizer.Add(about_gene_panel, 0, wx.EXPAND)
             main_sizer.Add(transcript_panel, 1, wx.EXPAND)
             main_panel.SetSizerAndFit(main_sizer)
-            
             sizer = wx.BoxSizer(wx.HORIZONTAL)
             sizer.Add(side_panel, 1, wx.EXPAND)
             sizer.Add(main_panel, 4, wx.EXPAND)
             self.SetSizer(sizer)
         
-            
-
         def OnDiseaseSelected(self, event):
             # Update disease type
             selected_disease = self.disease_combo.GetValue()
@@ -133,7 +129,6 @@ class TabOne(wx.Panel):
             gene_list = full_list.loc[full_list['disease_type'] == selected_disease_type, 'gene'].unique()
             self.gene_combo.SetItems(list(gene_list))
             self.gene_sizer.ShowItems(show=True)
-        
             self.Layout()
             
         def process_data(self, event):
@@ -143,52 +138,46 @@ class TabOne(wx.Panel):
             target_gene = self.gene_combo.GetValue()
             gene_info = full_list.loc[(full_list['disease'] == disease_n) & (full_list['disease_type'] == disease_t) &
                                     (full_list['gene'] == target_gene)]
-            
             gene_info = gene_info.drop(columns=["GENE ID (HGNC)","disease_type","DISEASE ID (MONDO)","disease"])
             
             # Update the table with filtered data
-            # Clear the existing grid data
             self.gene_info_table.ClearGrid()
-            # Get the number of rows and columns from the grid
+            # Get the number of rows and columns
             num_rows, num_cols = gene_info.shape
-            
-            # Populate the grid
+            # Populate the table
             for row in range(num_rows):
                 for col in range(num_cols):
                     value = str(gene_info.iloc[row, col])
                     self.gene_info_table.SetCellValue(row, col, value)
-            
-            # Refresh the grid
+            # Refresh the table
             self.gene_info_table.Refresh()
             self.gene_info_table.AutoSizeColumns()
-            
             # annotate genes
             gene_trans = annotation1[annotation1["gene"] == target_gene]
             gene_trans = gene_trans.iloc[:, [8, 9, 12, 13, 14, 15]]
             gene_trans = gene_trans.drop_duplicates()
-            
-            # Clear existing grid data
+            # Clear existing data
             self.gene_trans_table.ClearGrid()
-            
-            # Get the number of rows and columns from the data_frame
             num_rows, num_cols = gene_trans.shape
-            # Get the current number of rows in the grid
+            # Get the current number of rows in the table
             current_num_rows = self.gene_trans_table.GetNumberRows()
             current_num_cols = self.gene_trans_table.GetNumberCols()
-            # Append additional rows to the grid
+            # Delete excess rows and columns
+            if current_num_rows > num_rows:
+                self.gene_trans_table.DeleteRows(numRows=current_num_rows - num_rows)
+            if current_num_cols > num_cols:
+                self.gene_trans_table.DeleteCols(numCols=current_num_cols - num_cols)
+            # Append additional rows and columns
             if current_num_rows < num_rows:
                 self.gene_trans_table.AppendRows(numRows=num_rows - current_num_rows)
-
             if current_num_cols < num_cols:
                 self.gene_trans_table.AppendCols(numCols=num_cols - current_num_cols)
-
-            # Populate the grid
+            # Populate the table
             for row in range(num_rows):
                 for col in range(num_cols):
                     value = str(gene_trans.iloc[row, col])
                     self.gene_trans_table.SetCellValue(row, col, value)
-                    
-            # Refresh the grid
+            # Refresh the table
             self.gene_trans_table.Refresh()
             self.gene_trans_table.AutoSizeColumns()
             
@@ -202,10 +191,9 @@ class TabTwo(wx.Panel):
     def __init__(self, parent):
         wx.Panel.__init__(self, parent)
         
-        #self.current_page = 1
         # Create panels
         side_panel = wx.Panel(self)
-        side_panel.SetBackgroundColour('#D3D3D3')
+        side_panel.SetBackgroundColour('#ebebeb')
         main_panel = wx.Panel(self)
         side_sizer = wx.BoxSizer(wx.VERTICAL)
         main_sizer = wx.BoxSizer(wx.HORIZONTAL)
@@ -238,15 +226,16 @@ class TabTwo(wx.Panel):
         self.pval_slider = wx.Slider(side_panel, value=1, minValue=0, maxValue=100, style=wx.SL_HORIZONTAL)
         log_label = wx.StaticText(side_panel, label="LogFC:")
         self.log_slider = wx.Slider(side_panel, value=1, minValue=0, maxValue=5)
+        
         # Create Static text to display slider value
         self.slider_value_text = wx.StaticText(side_panel, label='0.01', style=wx.ALIGN_CENTER)
         side_panel.SetSizerAndFit(side_sizer)
         self.log_slider_value_text = wx.StaticText(side_panel, label='1', style=wx.ALIGN_CENTER)
         side_panel.SetSizerAndFit(side_sizer)
+        
         # Set default value to 0.01 and 1
         self.pval_slider.SetValue(1)
         self.log_slider.SetValue(1)
-        
         self.slider_pval_value = float(self.slider_value_text.GetLabel())
         self.slider_logfc_value = float(self.log_slider_value_text.GetLabel())
 
@@ -258,11 +247,13 @@ class TabTwo(wx.Panel):
         self.expression_table.SetColLabelValue(2, "LogFC")
         self.expression_table.SetColLabelValue(3, "Expression Profile")
         self.expression_table.AutoSizeColumns()
+        
         # Create a save button
         self.save_csv_button = wx.Button(side_panel, label="Save table as CSV")
         
         # Volcano plot
         self.volcano_plot = wx.Panel(main_panel)
+        
         # Create a save button
         self.save_png_button = wx.Button(side_panel, label="Save plot as PNG")
         
@@ -271,8 +262,6 @@ class TabTwo(wx.Panel):
         self.clear_data_button.SetBackgroundColour("#CD5C5C")
         self.clear_data_button.SetForegroundColour(wx.WHITE)
         
-        # Create the "Next" button
-        #self.next_button = wx.Button(main_panel, -1, "Next")
         
         # Bind event
         self.file_input.Bind(wx.EVT_FILEPICKER_CHANGED, self.on_upload_button_clicked)
@@ -287,18 +276,16 @@ class TabTwo(wx.Panel):
         self.save_csv_button.Bind(wx.EVT_BUTTON, self.on_save_csv_button_clicked)
         self.save_png_button.Bind(wx.EVT_BUTTON, self.on_save_png_button_clicked)
         self.clear_data_button.Bind(wx.EVT_BUTTON, self.on_clear_data_button_clicked)
-        #self.next_button.Bind(wx.EVT_BUTTON, self.on_next_page)
-        #self.col1_input.Bind(wx.EVT_COMBOBOX, self.on_column_selection)
 
         # Set sizers
         side_panel.SetSizerAndFit(side_sizer)
         main_panel.SetSizerAndFit(main_sizer)
+        
         # Arrange the panels side by side
         sizer = wx.BoxSizer(wx.HORIZONTAL)
         sizer.Add(side_panel, 1, wx.EXPAND)
         sizer.Add(main_panel, 5, wx.EXPAND)
         self.SetSizer(sizer)
-        
         side_sizer.Add(disease_input_label, 0, wx.ALL | wx.RIGHT, 5)
         side_sizer.Add(self.disease_combo, 0, wx.ALL, 5)
         side_sizer.Add(file_label, 0, wx.ALL, 5)
@@ -321,9 +308,7 @@ class TabTwo(wx.Panel):
         side_sizer.Add(self.save_csv_button, 0, wx.ALIGN_CENTER)
         side_sizer.Add(self.save_png_button, 0, wx.ALIGN_CENTER)
         side_sizer.Add(self.clear_data_button, 0, wx.ALIGN_CENTER)
-        
         main_sizer.Add(self.expression_table, 1, wx.EXPAND | wx.ALL)
-        #main_sizer.Add(self.next_button, 0, wx.ALIGN_CENTER)
         main_sizer.Add(self.volcano_plot, 2, wx.EXPAND | wx.ALL)
         
     
@@ -335,33 +320,44 @@ class TabTwo(wx.Panel):
         num_rows = self.df.shape[0]
         # Update the column label 
         self.expression_table.SetColLabelValue(0, self.selected_column1)
-        # Add the rows to the table based on the selected column
-        for i in range(num_rows): 
-            self.expression_table.AppendRows()
-            self.expression_table.SetCellValue(i, 0, str(self.df.iloc[i][self.selected_column1])) 
+        # Clear the existing data in column 0 before updating
+        for i in range(num_rows):
+            self.expression_table.SetCellValue(i, 0, "")
+        # Update the values in column 0 based on the selected column
+        for i in range(num_rows):
+            self.expression_table.SetCellValue(i, 0, str(self.df.iloc[i][self.selected_column1]))
         self.expression_table.AutoSizeColumns()
+        self.update_expression_profile()
+        
     
     def on_col_selected2(self,event):
         self.selected_column2 = self.col2_input.GetValue()
         num_rows = self.df.shape[0]
         # Update the column label 
         self.expression_table.SetColLabelValue(1, self.selected_column2)
-        # Add the rows to the table based on the selected column
-        for i in range(num_rows): 
-            self.expression_table.AppendRows()
-            self.expression_table.SetCellValue(i, 1, str(self.df.iloc[i][self.selected_column2])) 
+        # Clear the existing data in column 1 before updating
+        for i in range(num_rows):
+            self.expression_table.SetCellValue(i, 1, "")
+        # Update the values in column 1 based on the selected column
+        for i in range(num_rows):
+            self.expression_table.SetCellValue(i, 1, str(self.df.iloc[i][self.selected_column2]))
         self.expression_table.AutoSizeColumns()
+        self.update_expression_profile()
+    
     
     def on_col_selected3(self,event):
         self.selected_column3 = self.col3_input.GetValue()
         num_rows = self.df.shape[0]
         # Update the column label 
         self.expression_table.SetColLabelValue(2, self.selected_column3)
-        # Add the rows to the table based on the selected column
-        for i in range(num_rows): 
-            self.expression_table.AppendRows()
-            self.expression_table.SetCellValue(i, 2, str(self.df.iloc[i][self.selected_column3])) 
+        # Clear the existing data in column 2 before updating
+        for i in range(num_rows):
+            self.expression_table.SetCellValue(i, 2, "")
+        # Update the values in column 2 based on the selected column
+        for i in range(num_rows):
+            self.expression_table.SetCellValue(i, 2, str(self.df.iloc[i][self.selected_column3]))
         self.expression_table.AutoSizeColumns()
+        self.update_expression_profile()
     
     
     def upload_file(self, file_path):
@@ -370,16 +366,16 @@ class TabTwo(wx.Panel):
         # Filter genes based on the biomarker list
         self.df = self.df[self.df['gene'].isin(self.biom_list)]
         self.df = self.df.drop_duplicates()
-        # Extract desired columns 
         self.df_display = self.df[["gene", "pvalue", "log2FoldChange"]]
         # Update combo boxes
         self.col1_input.Set(self.df.columns)
         self.col2_input.Set(self.df.columns)
         self.col3_input.Set(self.df.columns)
-        # Clear existing data in expression table
+        # Clear existing data
         self.expression_table.ClearGrid()
-        # Update expression table with the extracted column data
+        # Update expression table
         num_rows, num_cols = self.df_display.shape
+        self.expression_table.ClearGrid() 
         self.expression_table.AppendRows(num_rows)
         for row in range(num_rows):
             for col in range(num_cols):
@@ -387,12 +383,12 @@ class TabTwo(wx.Panel):
                 cell_value = self.df_display.iloc[row, col]
                 # Set the cell value to the corresponding cell in the table
                 self.expression_table.SetCellValue(row, col, str(cell_value))
-
+                
         # Update table layout and create the volcano plot
         self.expression_table.Refresh()
         self.expression_table.AutoSizeColumns()
         self.update_expression_profile()
-        self.create_volcano_plot()
+        self.create_volcano_plot(self.expression_profile_data)
 
 
     def on_upload_button_clicked(self, event):
@@ -401,16 +397,12 @@ class TabTwo(wx.Panel):
         self.upload_file(file_path)
         
     def update_expression_table(self,event):
-        num_rows, num_cols = self.expression_table.shape  
-        # Check if the table is empty
-        if self.expression_table.GetNumberRows() == 0:
-            self.expression_table.AppendRows(num_rows)
-        # Check if the table has a different number of rows
-        elif num_rows != self.expression_table.GetNumberRows():
-            self.expression_table.ClearGrid()
-            
+        num_rows, num_cols = self.expression_table.shape 
+        self.expression_table.ClearGrid() 
         separator = self.separator_radio.GetStringSelection()
-
+         # Append new rows to the table
+        if num_rows < self.df_display.shape[0]:
+            self.expression_table.AppendRows(numRows=self.df_display.shape[0] - num_rows)
         for row in range(num_rows):
             for col in range(num_cols):
                 # Get the cell value
@@ -418,28 +410,16 @@ class TabTwo(wx.Panel):
                 # Split the cell value using the selected separator
                 cell_value_parts = cell_value.split(separator)
                 # Set the cell value parts to the corresponding cells in the table
-                table_col = col  # Separate variable for table column index
+                # Separate variable for table column index
+                table_col = col
                 for i, part in enumerate(cell_value_parts):
-                    # Update the table column index to use table_col + i
                     self.expression_table.SetCellValue(row -num_rows, table_col + i, part)
-
-        for row in range(num_rows):
-            logfc = float(self.expression_table.GetCellValue(row - num_rows, 2))
-            pval = float(self.expression_table.GetCellValue(row - num_rows, 1))
-            expression_profile = ""
-            if logfc > self.slider_logfc_value and pval < self.slider_pval_value:
-                expression_profile = "Upregulated genes"
-            elif logfc < -self.slider_logfc_value and pval < self.slider_pval_value:
-                expression_profile = "Downregulated genes"
-            else:
-                expression_profile = "Not Significant"
-            self.expression_table.SetCellValue(row - num_rows, 3, expression_profile)
-
+        # Update expression profile
+        self.update_expression_profile()
         self.on_gene_selection()
         # Update table layout and volcano plot
         self.expression_table.Refresh()
         self.expression_table.AutoSizeColumns()
-        self.update_expression_profile()
         self.create_volcano_plot()
         
         
@@ -455,7 +435,7 @@ class TabTwo(wx.Panel):
             data.append(row_data)
         # Update expression table with new separator
         df = pd.DataFrame(data, columns=["Gene", "P-value", "LogFC", "Expression Profile"])
-        self.update_expression_table(df, separator)
+        self.update_expression_table()
         
         
     def on_pval_slider_scroll(self, event):
@@ -471,13 +451,15 @@ class TabTwo(wx.Panel):
         self.log_slider_value_text.SetLabel(f'{self.slider_logfc_value:.2f}')
         self.update_expression_profile()
         
+        
     def update_expression_profile(self):
         num_rows = self.expression_table.GetNumberRows()
+        pval_col_label = self.expression_table.GetColLabelValue(1)
         for row in range(num_rows):
             logfc = self.expression_table.GetCellValue(row, 2)
             pval = self.expression_table.GetCellValue(row, 1)
             expression_profile = ""
-            if self.expression_table.GetColLabelValue(1) == "padj":  
+            if pval_col_label == "padj":  
                 padj = float(pval)
                 if float(logfc) > self.slider_logfc_value and padj < self.slider_pval_value :
                     expression_profile = "Upregulated genes"
@@ -497,11 +479,9 @@ class TabTwo(wx.Panel):
         self.create_volcano_plot(self.expression_profile_data)
         
     def on_save_csv_button_clicked(self, event):
-        # Ask the user where to save the CSV file
         save_dialog = wx.FileDialog(self, "Save as CSV", wildcard="CSV files (*.csv)|*.csv", style=wx.FD_SAVE | wx.FD_OVERWRITE_PROMPT)
         if save_dialog.ShowModal() == wx.ID_CANCEL:
             return
-        # Get the file path from the save dialog
         file_path = save_dialog.GetPath()
         # Save the table as a CSV file
         with open(file_path, 'w', newline='') as f:
@@ -515,9 +495,8 @@ class TabTwo(wx.Panel):
                     self.expression_table.GetCellValue(row, 3),])
     
     def create_volcano_plot(self, expression_profile_data):
-        # Clear previous plot
         self.volcano_plot.ClearBackground()
-        # Retrieve data from selected rows in expression table
+        # Retrieve data
         num_rows = self.expression_table.GetNumberRows()
         pval_data = []
         logfc_data = []
@@ -533,7 +512,6 @@ class TabTwo(wx.Panel):
         fig = Figure(figsize=(10, 8), dpi=80)
         canvas = FigureCanvas(self.volcano_plot, -1, fig)
         ax = fig.add_subplot(111)
-        # Create a colormap for mapping expression profiles to colors
         color_map = {'Upregulated genes': 'blue', 'Downregulated genes': 'red', 'Not Significant': 'green'}
         colors = np.array([color_map.get(profile, 'black') for profile in expression_profile_data])
         # Plot the data points with colors
@@ -553,11 +531,9 @@ class TabTwo(wx.Panel):
         return fig
         
     def on_save_png_button_clicked(self, event):
-        # Ask the user where to save the PNG file
         save_dialog = wx.FileDialog(self, "Save as PNG", wildcard="PNG files (*.png)|*.png", style=wx.FD_SAVE | wx.FD_OVERWRITE_PROMPT)
         if save_dialog.ShowModal() == wx.ID_CANCEL:
             return
-        # Get the file path from the dialog
         filepath = save_dialog.GetPath()
         save_dialog.Destroy()
         # Create a new figure for saving as PNG
@@ -578,7 +554,6 @@ class TabTwo(wx.Panel):
             self.canvas = None
         self.volcano_plot.DestroyChildren()
         self.volcano_plot.Layout()
-    
         self.Layout()
         
 #######################################################################################
@@ -590,7 +565,7 @@ class TabThree(wx.Panel):
         wx.Panel.__init__(self, parent)
         # Create panels
         side_panel = wx.Panel(self)
-        side_panel.SetBackgroundColour('#D3D3D3')
+        side_panel.SetBackgroundColour('#ebebeb')
         main_panel = wx.Panel(self)
         side_sizer = wx.BoxSizer(wx.VERTICAL)
         main_sizer = wx.BoxSizer(wx.VERTICAL)
@@ -610,7 +585,6 @@ class TabThree(wx.Panel):
         self.clear_data_button.SetBackgroundColour("#CD5C5C")
         self.clear_data_button.SetForegroundColour(wx.WHITE)
         
-        
         # Sizers
         side_sizer.Add(disease_input_label, 0, wx.EXPAND | wx.ALL, 5)
         side_sizer.Add(self.disease_combo, 0, wx.EXPAND | wx.ALL, 5)
@@ -622,7 +596,6 @@ class TabThree(wx.Panel):
         side_panel.SetSizerAndFit(side_sizer)
         side_sizer.Add(self.save_csv_button, 0, wx.ALIGN_CENTER)
         side_sizer.Add(self.clear_data_button, 0, wx.ALIGN_CENTER)
-        
         
         # Variant table :SNP
         self.snp_table = wx.grid.Grid(main_panel)
@@ -695,7 +668,6 @@ class TabThree(wx.Panel):
         # Refresh the layout to reflect the changes
         self.Layout()
         
-        
     def read_vcf(self, path):
         with open(path, 'r') as f:
             lines = [l for l in f if not l.startswith('##')]
@@ -748,7 +720,6 @@ class TabThree(wx.Panel):
         self.combined_patient.loc[self.combined_patient['nuSub'].isin(tv), 'TiTv'] = 'Tv'
         # Rename columns "nuSub" and "TiTv" to "snp_controls" and "TiTv_controls"
         self.combined_patient = self.combined_patient.rename(columns={'nuSub': 'snp_patients', 'TiTv': 'TiTv_patients'})
-        #print(combined_patient) 
         
     def read_compared_group_final(self,combined_patient,combined_control):
         # Merge patient and control tables based on "CHROM" and "POS" columns
@@ -760,12 +731,7 @@ class TabThree(wx.Panel):
         self.compare_group.loc[(self.compare_group['snp_controls'] == "no") & (self.compare_group['snp_patients'] != "no"), 'compare'] = "addition"
         self.compare_group.loc[(self.compare_group['snp_controls'] == self.compare_group['snp_patients']), 'compare'] = "population specific"
         self.compare_group.loc[(self.compare_group['snp_controls'] != self.compare_group['snp_patients']) & (self.compare_group['snp_controls'] != "no") & (self.compare_group['snp_patients'] != "no"), 'compare'] = "different"
-        # Free up memory space
-        #del file_contents_control
-        #del file_contents_patient
-        #del combined_control
-        #del combined_patient
-        
+
     def read_combined_indels(self,folder_path):
         # Read data from control 
         folder_name1 = "control"
@@ -800,23 +766,18 @@ class TabThree(wx.Panel):
             
             
     def on_save_csv_button_clicked(self, event):
-        # Ask the user which table to save
+        # Ask the user which table to save and save
         table_choice = wx.SingleChoiceDialog(self, "Which data do you want to save?", "Choose table", ["Indels", "SNPs"])
         if table_choice.ShowModal() == wx.ID_CANCEL:
             return
         table_name = table_choice.GetStringSelection()
-
-        # Ask the user where to save the CSV file
         save_dialog = wx.FileDialog(self, "Save as CSV", wildcard="CSV files (*.csv)|*.csv", style=wx.FD_SAVE | wx.FD_OVERWRITE_PROMPT)
         if save_dialog.ShowModal() == wx.ID_CANCEL:
             return 
-
-        # Get the file path from the save dialog
         file_path = save_dialog.GetPath()
         # Define the column names for both tables
         indel_cols = ['Chrom', 'Gene1', 'Gene2', ' SNP position', 'ALT Patient',"REF Control","ALT Control","REF Patient" 'Compare']
         snp_cols = ['Chrom', 'Gene', 'SNP position', 'SNP ID', 'Reference Genome Allele', 'Control\'s Allele', 'Patient\'s Allele', 'Compare']
-
         # Save the selected table data as a CSV file
         with open(file_path, 'w', newline='') as f:
             writer = csv.writer(f)
@@ -835,11 +796,10 @@ class TabThree(wx.Panel):
                     table.GetCellValue(row, 4),
                     table.GetCellValue(row, 5),
                     table.GetCellValue(row, 6),
-                    table.GetCellValue(row, 7)]) 
-        
+                    table.GetCellValue(row, 7)])         
 
     def on_submit_button_click(self, event):
-        # display the message dialog
+        # display a message
         msg = wx.BusyInfo("Processing data, please wait...")
         # Get input values
         folder_path = self.folder_path_input.GetValue()
@@ -875,11 +835,8 @@ class TabThree(wx.Panel):
             ann_snps3.columns = ["Chrom", "Gene", "SNP position", "SNP ID", "Reference Genome Allele", "Control's Allele", "Patient's Allele", "Compare"]
             ann_snps3 = ann_snps3.replace(to_replace="no", value=".", regex=True)
             ann_snps3 =ann_snps3.drop_duplicates()
-            #print("ann_snps3:")
-            #print(ann_snps3)
             self.on_gene_selection()
             final_table = ann_snps3[ann_snps3['Gene'].isin(self.biom_list)]
-            #print(final_table)
             # Update SNP table with ann_snps3 table data
             self.snp_table.ClearGrid()
             num_rows, num_cols = final_table.shape
@@ -913,51 +870,29 @@ class TabThree(wx.Panel):
             # Remove 'chr' from chromosome column in combined_control/patient tables
             self.combined_control = self.combined_control.replace(to_replace="chr", value="", regex=True)
             self.combined_patient = self.combined_patient.replace(to_replace="chr", value="", regex=True)
-            #print("self.combined_control")
-            #print(self.combined_control)
-            #print("self.combined_patient")
-            #print(self.combined_patient)
-            #print("annotated_indel")
-            #print(annotated_indel)
             # Merge annotated_indel with combined_control on matching chrom and snp_position
             annotated_indel2 = pd.merge(annotated_indel, self.combined_control, left_on=['chrom', 'snp_position'], right_on=['CHROM', 'POS_snp_control'])
             annotated_indel2 = annotated_indel2.drop(columns=["CHROM" , "POS_snp_control"])
-            #print("annotated_indel2")
-            #print(annotated_indel2)
-
             # Extract chrom and snp_position columns from combined_patients_indel and remove 'chr' from chrom values
             self.combined_patient.rename(columns={"CHROM": "chrom"}, inplace=True)
             chrom_snppos = self.combined_patient[['chrom', 'POS_snp_patient']]
             chrom_snppos = chrom_snppos.replace(to_replace="chr", value="", regex=True)
-            #print("chrom_snppos")
-            #print(chrom_snppos)
-
             # Extract chrom, start, end, and gene columns from annotation1 and rename columns
             gene_pos = annotation1.iloc[:, [4, 5, 6, 8]].drop_duplicates()
             gene_pos.columns = ["chrom", "start", "end", "gene name"]
-            #print("gene_pos")
-            #print(gene_pos)
-
             # Merge gene_pos with chrom_snppos on matching chrom and snp_position with snp_position between gene_start and gene_end
             annotated_indel3 = pd.merge(gene_pos, chrom_snppos, on="chrom")
-            #print("annotated_indel3")
-            #print(annotated_indel3)
             annotated_indel3 = annotated_indel3[(annotated_indel3['POS_snp_patient'] > annotated_indel3['start']) & (annotated_indel3['POS_snp_patient'] < annotated_indel3['end'])]
             annotated_indel3 = annotated_indel3.drop('POS_snp_patient', axis=1)
             # Merge annotated_indel with combined_patients_indel on matching chrom and snp_position
             annotated_indel4 = pd.merge(annotated_indel, self.combined_patient, left_on=['chrom', 'snp_position'], right_on=['chrom', 'POS_snp_patient'])
             annotated_indel4 = annotated_indel4.drop(['POS_snp_patient'], axis=1)
             annotated_indel4 = annotated_indel4.rename(columns={'gene name': 'gene1'})
-            #print("annotated_indel4")
-            #print(annotated_indel4)
-
             # Rename columns in annotated_indel2
             annotated_indel2 = annotated_indel2.rename(columns={'gene name': 'gene2'})
             # Compare groups and assign 'compare' values
             compare_group_i = pd.merge(annotated_indel4, annotated_indel2, how='outer', on=['chrom', 'snp_position'])
             compare_group_i['compare'] = ''
-            #print("compare_group_i")
-            #print(compare_group_i)
             compare_group_i.loc[(compare_group_i['ALT_control'].notna()) & (compare_group_i['ALT_patient'].isna()), 'compare'] = 'deletion'
             compare_group_i.loc[(compare_group_i['ALT_control'].isna()) & (compare_group_i['ALT_patient'].notna()), 'compare'] = 'addition'
             compare_group_i.loc[(compare_group_i['ALT_control'] == compare_group_i['ALT_patient']) & (compare_group_i['ALT_control'].notna()) & (compare_group_i['ALT_patient'].notna()), 'compare'] = 'population specific'
@@ -969,8 +904,6 @@ class TabThree(wx.Panel):
             final_table = pd.merge(self.biom_list, compare_group_i, how='inner', left_on='gene', right_on='gene1')
             final_table = pd.concat([final_table, pd.merge(self.biom_list, compare_group_i, how='inner', left_on='gene', right_on='gene2')])
             final_table = final_table.drop(['gene'], axis=1)
-            #print(final_table)
-
             # Update Indel table with ann_snps3 table data
             self.indel_table.ClearGrid()
             num_rows, num_cols = final_table.shape
@@ -1000,7 +933,6 @@ class TabThree(wx.Panel):
             self.indel_table.AutoSizeColumns()
         # Clear file input
         self.folder_path_input.SetValue("")
-            
         self.Layout()
 
 class NeuroVar(wx.Frame):
@@ -1029,7 +961,6 @@ class NeuroVar(wx.Frame):
 if __name__ == '__main__':
     app = wx.App()
     frame = NeuroVar()
-    #frame.Center()
     screen_width, screen_height = wx.GetDisplaySize()
     frame.SetSize(screen_width, screen_height)
     frame.SetPosition((0, 0))
