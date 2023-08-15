@@ -6,14 +6,12 @@
 3. [Implementation and  Operation](#Implementation-and-Operation)
 4. [Installation](#Installation)
 5. [Usage](#Usage)
-6. [Case study](#Case-study)
-7. [Demonstration](#Demonstration)
-8. [Citation](#Citation)
-9. [License](#License)
-10. [Contributors](#Contributors)
+6. [Demonstration](#Demonstration)
+7. [Citation](#Citation)
+8. [License](#License)
+9. [Contributors](#Contributors)
 <br>
 
-### Don't have time to read! Watch the [video](https://youtu.be/aoLq5lzMRog?list=PLkTKVToorl7YckYrT7o6M1kfEHHJYBfGS).
 ## Background
 
 The expanding availability of large-scale genomic data and the growing interest in uncovering gene-disease associations call for efficient tools to visualize and evaluate gene expression and genetic variation data.  
@@ -42,15 +40,15 @@ The current version includes :
               ★ Peroxisomal disorders  
               ★ Hereditary cancer 
               ★ Mitochondrial disease 
-              ★ Retina related disorders 
+              ★ Retina-related disorders 
               ★ General Gene Curation
               ★ Hearing Loss 
-              ★ Fatty Acid Oxidation Disordes
+              ★ Fatty Acid Oxidation Disorders
 
 
 ## Implementation and  Operation
 
-NeuroVar is available as a Shiny Application and a desktop appplication.
+NeuroVar is available as a Shiny Application and a desktop application.
 
 1. Shiny application
 
@@ -58,7 +56,7 @@ NeuroVar is available as a Shiny Application and a desktop appplication.
     - platform-independent
     - all dependencies are installed automatically with the tool
     - Internet requirement: Only if using an online server
-    - Third party tools requirement: R studio or a online Server
+    - Third-party tools requirement: R studio or an online Server
     - Pre-requirements: R  installation
     
      ### Installation
@@ -71,15 +69,15 @@ NeuroVar is available as a Shiny Application and a desktop appplication.
 2. Desktop application
 
     - does not require any computational skills to use
-    - platform-independent
+    - platform: Windows
     - all dependencies are installed automatically with the tool
     - Internet requirement: NO
-    - Third party tools requirement: NO
+    - Third-party tools requirement: NO
     - Pre-requirements: Python  installation
     
     ### Installation
 
-      **1 -Download the application**: Download the application file from the [here](https://drive.google.com/file/d/1OfYySsfIaz1vafHFaqlGbLb1tirumIWe/view?usp=sharing)    
+      **1 -Download the application**: Download the application file from the [here](https://drive.google.com/file/d/1SqtrehHwvUPQ4q74lfrOODWnrqlpmQ1A/view?usp=drive_link)    
       
       **2- Extract the application**: Extract the contents of the downloaded file to a directory of your choice                                                                     
       **3- Install dependencies**: Install the latest version of Python if your computer does not have them:  [Python](https://www.python.org/downloads/windows/)            
@@ -91,15 +89,15 @@ NeuroVar requires gene expression CSV files and genetic variants VCF files as in
 
 ## Usage
 
-The tool integrates 3 tabs, each for a different functionality,  as explained bellow:
+The tool integrates 3 tabs, each for a different functionality,  as explained below:
 
-1. First the user select the patient’s disease, next, a list of specific subtypes of the disease with neurological manifestation is provided. More information about each gene is provided including mode of inheritance, description, type, and transcripts. A links for the official online report validating the Gene's association with the disease is also provided.
+1. First the user selects the patient’s disease, next, a list of specific subtypes of the disease with neurological manifestation is provided. More information about each gene is provided including mode of inheritance, description, type, and transcripts. A Link to the official online report validating Gene's association with the disease is also provided.
 
 <p align="center">
 <img src="https://user-images.githubusercontent.com/73958439/232723944-8e5e658e-bbe5-40e7-92d7-f855ae0400aa.png" width="600" >
 </p>
 
-2.Visualize the biomarkers expression profile:
+2. Visualize the biomarkers expression profile:
 After importing a CSV file and identifying the key columns, the log2FC value and p-value to define the differential expression profile are requested. The genes’ expression profiles are summarized in a table and represented in a volcano plot.
 
 <p align="center">
@@ -107,18 +105,12 @@ After importing a CSV file and identifying the key columns, the log2FC value and
 </p>
 
 3. Visualize SNPs and Indels data:
-The user is requested to define the path to the directory containing the VCF files. The user needs to define the variants type (SNPs or Indels). The VCF files are processed and annotated, and then the variants in the biomarkers are filtered and resumed in a table comparing the reference genome, the controls group and the patients group.
+The user is requested to define the path to the directory containing the VCF files. The user needs to define the variants type (SNPs or Indels). The VCF files are processed and annotated, and then the variants in the biomarkers are filtered and resumed in a table comparing the reference genome, the control group and the patient group.
 
 <p align="center">
 <img src="https://user-images.githubusercontent.com/73958439/232724156-3bd91417-89ec-4d1e-a56e-953836a0256b.png" width="600" >
 </p>
 
-
-## Case study
-
-To validate the pipeline, a case study was performed on the public dataset SRP149638 available on the SRA database. The file’s preprocessing, genetic expression analysis, and variant calling were performed using the Exvar R package.
-The dataset corresponds to RNA sequencing data (Expression profiling by high throughput sequencing) from the peripheral blood mononuclear cells (PBMC) from healthy donors and Amyotrophic Lateral Sclerosis (ALS) patients.
-The expression analysis shows that only one ALS biomarker is differentially expressed which is TUBA4A gene, a biomarker of ALS type 22. TUBA4A is a protein-coding gene inherited in autosomal dominant mode.
 
 ## Demonstration
 
@@ -137,8 +129,8 @@ Artistic license 2.0
 
 ## Contributors
 
-Hiba Ben Aribi, UTM, Tunisia  (Developer - Writer).
+Hiba Ben Aribi,  Faculty of Sciences of Tunis, University of Tunis El Manar, Tunis, Tunisia  (Developer - Writer).
 
-Najla Abassi, UTM, Tunisia  (Developer - Writer).
+Najla Abassi, Pasteur Institute of Tunis,, Tunisia  (Developer - Writer).
 
 Olaitan I. Awe, African Society for Bioinformatics and Computational Biology (ASBCB), South Africa.
