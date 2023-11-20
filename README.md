@@ -77,8 +77,7 @@ NeuroVar is available as a Shiny Application and a desktop application.
     
     ### Installation
 
-      **1 -Download the application**: Download the application file from the [here](https://drive.google.com/file/d/1SqtrehHwvUPQ4q74lfrOODWnrqlpmQ1A/view?usp=drive_link)    
-      
+      **1 -Download the application**: Download the application file from the [here](https://drive.google.com/file/d/1UiLqW-ZER6ysMHjTSW033AQwhXlqtuFy/view?usp=sharing)    
       **2- Extract the application**: Extract the contents of the downloaded file to a directory of your choice                                                                     
       **3- Install dependencies**: Install the latest version of Python if your computer does not have them:  [Python](https://www.python.org/downloads/windows/)            
 
