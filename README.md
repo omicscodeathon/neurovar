@@ -6,10 +6,9 @@
 3. [Implementation and  Operation](#Implementation-and-Operation)
 4. [Installation](#Installation)
 5. [Usage](#Usage)
-6. [Demonstration](#Demonstration)
-7. [Citation](#Citation)
-8. [License](#License)
-9. [Contributors](#Contributors)
+6. [Citation](#Citation)
+7. [License](#License)
+8. [Contributors](#Contributors)
 <br>
 
 ## Background
@@ -88,7 +87,7 @@ The user is requested to define the path to the directory containing the VCF fil
 </p>
 
 
-## Demonstration Data
+#### Demonstration Data
 
 Demonstration data are provided [here](https://github.com/omicscodeathon/neurovar/blob/main/demonstration_data.rar)
 
