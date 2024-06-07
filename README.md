@@ -3,12 +3,9 @@
 ## Table of Contents
 1. [Background](#Background)
 2. [About NeuroVar](#About-NeuroVar)
-3. [Implementation and  Operation](#Implementation-and-Operation)
-4. [Installation](#Installation)
-5. [Usage](#Usage)
-6. [Citation](#Citation)
-7. [License](#License)
-8. [Contributors](#Contributors)
+3. [Usage Guidelines](#Usage_Guidelines)
+4. [Citation](#Citation)
+5. [Contributors](#Contributors)
 <br>
 
 ## Background
@@ -45,7 +42,7 @@ The current version includes :
               ★ Fatty Acid Oxidation Disorders
 
 
-## Implementation and  Operation
+## Usage Guidelines
 
 NeuroVar is available as a Shiny Application and a desktop application.
 
@@ -56,48 +53,11 @@ Guide :  [Click Here](https://github.com/omicscodeathon/neurovar/edit/main/Neuro
 2. Desktop application
 
 Guide :  [Click Here](https://github.com/omicscodeathon/neurovar/tree/main/NeuroVar_Desktop_Application)      
-    
-## Inputs 
-
-NeuroVar requires gene expression CSV files and genetic variants VCF files as inputs.
-
-
-## Usage
-
-The tool integrates 3 tabs, each for a different functionality,  as explained below:
-
-1. First the user selects the patient’s disease, next, a list of specific subtypes of the disease with neurological manifestation is provided. More information about each gene is provided including mode of inheritance, description, type, and transcripts. A Link to the official online report validating Gene's association with the disease is also provided.
-
-<p align="center">
-<img src="https://user-images.githubusercontent.com/73958439/232723944-8e5e658e-bbe5-40e7-92d7-f855ae0400aa.png" width="600" >
-</p>
-
-2. Visualize the biomarkers expression profile:
-After importing a CSV file and identifying the key columns, the log2FC value and p-value to define the differential expression profile are requested. The genes’ expression profiles are summarized in a table and represented in a volcano plot.
-
-<p align="center">
-<img src="https://user-images.githubusercontent.com/73958439/232724064-e2803d44-4381-408e-b0b7-0a9553b8a16b.png" width="600" >
-</p>
-
-3. Visualize SNPs and Indels data:
-The user is requested to define the path to the directory containing the VCF files. The user needs to define the variants type (SNPs or Indels). The VCF files are processed and annotated, and then the variants in the biomarkers are filtered and resumed in a table comparing the reference genome, the control group and the patient group.
-
-<p align="center">
-<img src="https://user-images.githubusercontent.com/73958439/232724156-3bd91417-89ec-4d1e-a56e-953836a0256b.png" width="600" >
-</p>
-
-
-#### Demonstration Data
-
-Demonstration data are provided [here](https://github.com/omicscodeathon/neurovar/blob/main/demonstration_data.rar)
-
-This data will guide you to organize your data correctly and could be used to test the tool.
+ 
 
 ## Citation
 
 Hiba Ben Aribi, Najla Abassi and Olaitan I. Awe. NeuroVar: A Genetic Expression and Variation data visualization tool for Neurological diseases’ biomarkers https://github.com/omicscodeathon/neurovar
-
-
 
 ## Contributors
 
