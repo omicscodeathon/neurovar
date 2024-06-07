@@ -52,7 +52,7 @@ In the First tab, select the patient’s disease, next, a list of specific subty
 **Step 6:** Visualize the biomarkers expression profile:
 
    
-In teh second tab, import the gene expression data file (as a CSV file) and identify the key columns, the log2FC value and p-value to define the differential expression profile. The genes’ expression profiles are summarized in a table and represented in a volcano plot.
+In the second tab, import the gene expression data file (as a CSV file) and identify the key columns, the log2FC value and p-value to define the differential expression profile. The genes’ expression profiles are summarized in a table and represented in a volcano plot.
 
 <p align="center">
 <img src="https://user-images.githubusercontent.com/73958439/232724064-e2803d44-4381-408e-b0b7-0a9553b8a16b.png" width="600" >
