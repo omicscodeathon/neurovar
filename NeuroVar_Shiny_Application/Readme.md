@@ -29,11 +29,15 @@
 
 **Step 3 :** Open the application 
 
-    -  Open the application folder using RStudio   
+    - Open the application folder using RStudio   
 
-    - set the shiny app directory as a working directory    
+    - set the shiny app directory as a working directory   
 
-**Step 4 :** Run the app 
+    - Then open the file named "neurovar.R"
+
+**Step 4 :** Run the app by cicking on the "Run APP" button 
+ 
+![image](https://github.com/omicscodeathon/neurovar/assets/73958439/249ad53a-db4c-4bd2-b0d9-9babd98bd8df)
 
 
 ## License
