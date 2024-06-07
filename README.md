@@ -52,35 +52,12 @@ NeuroVar is available as a Shiny Application and a desktop application.
 
 1. Shiny application
 
-    - does not require any computational skills to use
-    - platform-independent
-    - all dependencies are installed automatically with the tool
-    - Internet requirement: Only if using an online server
-    - Third-party tools requirement: R studio or an online Server
-    - Pre-requirements: R  installation
-    
-     ### Installation
-
-      **1 -Download the application**: Download the application file from [here](https://github.com/omicscodeathon/neurovar/tree/main/NeuroVar_Shiny_Application)                                                                                                                      
-      **2- Install dependencies**: Install the latest version of R if your computer does not have it: [R](https://cran.r-project.org/bin/windows/base/)     
-      
-      **3- Setting**: set the shiny app directory as a working directory     
-    
+Guide :  
+ 
 2. Desktop application
 
-    - does not require any computational skills to use
-    - platform: Windows
-    - all dependencies are installed automatically with the tool
-    - Internet requirement: NO
-    - Third-party tools requirement: NO
-    - Pre-requirements: Python  installation
+Guide :  [Click Here](https://github.com/omicscodeathon/neurovar/tree/main/NeuroVar_Desktop_Application)      
     
-    ### Installation
-
-      **1 -Download the application**: Download the application file from the [here](https://drive.google.com/file/d/1UiLqW-ZER6ysMHjTSW033AQwhXlqtuFy/view?usp=sharing)    
-      **2- Extract the application**: Extract the contents of the downloaded file to a directory of your choice                                                                     
-      **3- Install dependencies**: Install the latest version of Python if your computer does not have them:  [Python](https://www.python.org/downloads/windows/)            
-
 ## Inputs 
 
 NeuroVar requires gene expression CSV files and genetic variants VCF files as inputs.
@@ -111,7 +88,7 @@ The user is requested to define the path to the directory containing the VCF fil
 </p>
 
 
-## Demonstration
+## Demonstration Data
 
 Demonstration data are provided [here](https://github.com/omicscodeathon/neurovar/blob/main/demonstration_data.rar)
 
@@ -119,11 +96,8 @@ This data will guide you to organize your data correctly and could be used to te
 
 ## Citation
 
-Hiba Ben Aribi, Najla Abassi and Olaitan I. Awe. NeuroVar: A Genetic Expression and Variation data visualization tool for Neurological diseases’ biomarkers. (2023). https://github.com/omicscodeathon/neurovar
+Hiba Ben Aribi, Najla Abassi and Olaitan I. Awe. NeuroVar: A Genetic Expression and Variation data visualization tool for Neurological diseases’ biomarkers https://github.com/omicscodeathon/neurovar
 
-## License
-
-Artistic license 2.0
 
 
 ## Contributors
