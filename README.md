@@ -52,7 +52,7 @@ NeuroVar is available as a Shiny Application and a desktop application.
 
 1. Shiny application
 
-Guide :  
+Guide :  [Click Here](https://github.com/omicscodeathon/neurovar/edit/main/NeuroVar_Shiny_Application)     
  
 2. Desktop application
 
