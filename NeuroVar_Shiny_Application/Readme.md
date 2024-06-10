@@ -28,7 +28,7 @@
 
            - Download RStudio
 
-**Step 3 :** Open the application 
+**Step 3 :** Settings
 
     - Open the application folder (NeurVar_Shiny) using RStudio   
 
@@ -38,7 +38,7 @@
 
     - Then open the file named "Run_App.R"
 
-**Step 4 :** Open The Application
+**Step 4 :** Run The Application
 
 Run the app code by cicking on the "Run APP" button
  
