@@ -45,9 +45,9 @@ The tool integrates 3 tabs, each for a different functionality.
 
 In the First tab, select the patient’s disease, next, a list of specific subtypes of the disease with neurological manifestation is provided. More information about each gene is provided including mode of inheritance, description, type, and transcripts. A Link to the official online report validating Gene's association with the disease is also provided.
 
-<p align="center">
+
 ![Figure 1](https://github.com/omicscodeathon/neurovar/assets/73958439/633a6d98-959f-4522-9f39-d5a3774382e3)
-</p>
+
 
 **Step 6:** Visualize the biomarkers expression profile:
 
