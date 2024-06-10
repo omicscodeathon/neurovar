@@ -55,17 +55,16 @@ In the First tab, select the patient’s disease, next, a list of specific subty
 In the second tab, import the gene expression data file (as a CSV file) and identify the key columns, the log2FC value and p-value to define the differential expression profile. The genes’ expression profiles are summarized in a table and represented in a volcano plot.
 
 
-<p align="center">
 ![fig2 2](https://github.com/omicscodeathon/neurovar/assets/73958439/917b3134-2d7b-4c37-b529-308d4d5b51c5)
-</p>
+
 
 **Step 7:** Visualize SNPs and Indels data:
 
 In the third tab,  define the path to the directory containing the genetic variants data files ( as VCF files). Then define the variants type (SNPs or Indels). The VCF files are processed and annotated, and then the variants in the biomarkers are filtered and resumed in a table comparing the reference genome, the control group and the patient group.
 
-<p align="center">
+
 ![Figure 3 indel](https://github.com/omicscodeathon/neurovar/assets/73958439/a886405a-8282-4624-8f4c-edeedd7f517c)
-</p>
+
 
 #### Demonstration Data
 
