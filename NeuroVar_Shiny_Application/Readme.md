@@ -32,7 +32,9 @@
 
     - Open the application folder (NeurVar_Shiny) using RStudio   
 
-    - set the folder as a working directory   
+    - Set the folder as a working directory 
+
+    - Unrar the folder "annotation" in the "internal data" folder.
 
     - Then open the file named "Run_App.R"
 
