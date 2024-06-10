@@ -12,7 +12,8 @@
 
 **Step 1 :** Download the application
    
-    Download the application folder from [here](https://github.com/omicscodeathon/neurovar/tree/main/NeuroVar_Shiny_Application)                                                                                                                      
+    Download the application folder "NeurVar_Shiny"     
+    from [here](https://github.com/omicscodeathon/neurovar/tree/main/NeuroVar_Shiny_Application/NeurVar_Shiny)                                                                                                                      
 **Step 2 :** Install dependencies
     
     Install the latest version of R if your computer does not have it: [R](https://cran.r-project.org/bin/windows/base/)   
@@ -29,15 +30,19 @@
 
 **Step 3 :** Open the application 
 
-    - Open the application folder using RStudio   
+    - Open the application folder (NeurVar_Shiny) using RStudio   
 
-    - set the shiny app directory as a working directory   
+    - set the folder as a working directory   
 
-    - Then open the file named "neurovar.R"
+    - Then open the file named "Run_App.R"
 
-**Step 4 :** Run the app by cicking on the "Run APP" button 
+**Step 4 :** Open The Application
+
+Run the app code by cicking on the "Run APP" button
  
 ![image](https://github.com/omicscodeathon/neurovar/assets/73958439/249ad53a-db4c-4bd2-b0d9-9babd98bd8df)
+
+All dependencies will be installed automaticly and the application's dashboard will appear.
 
 **Step 5:**
 
