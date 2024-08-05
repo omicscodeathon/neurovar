@@ -75,7 +75,7 @@ In the third tab,  define the path to the directory containing the genetic varia
 
 #### Demonstration Data
 
-Demonstration data are provided [here](https://github.com/omicscodeathon/neurovar/blob/main/demonstration_data.rar)
+Demonstration data are provided [here](https://github.com/omicscodeathon/neurovar/tree/main/demonstration_data)
 
 This data will guide you to organize your data correctly and could be used to test the tool.
 
