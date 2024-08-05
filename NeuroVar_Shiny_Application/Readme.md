@@ -61,9 +61,6 @@ In the First tab, select the patient’s disease, next, a list of specific subty
    
 In the second tab, import the gene expression data file (as a CSV file) and identify the key columns, the log2FC value and p-value to define the differential expression profile. The genes’ expression profiles are summarized in a table and represented in a volcano plot.
 
-
-![fig2 2](https://github.com/omicscodeathon/neurovar/assets/73958439/917b3134-2d7b-4c37-b529-308d4d5b51c5)
-
 ![image](https://github.com/user-attachments/assets/81b82292-6e4f-4eea-8a0b-8c7734dc466b)
 
 **Step 7:** Visualize SNPs and Indels data:
