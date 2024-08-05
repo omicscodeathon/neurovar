@@ -27,7 +27,12 @@ library(DT)
 library(sqldf)
 library(data.table)
 library(fs)
-
-
-annotation <- read_csv("internal_data/annotation.txt") 
 full_list <- read_csv("internal_data/full_list.csv")
+unzip_dir <- "internal_data"
+zip_file1 <- "internal_data/annotation_part1.zip"
+unzip(zip_file1, exdir = unzip_dir)
+zip_file2 <- "internal_data/annotation_part2.zip"
+unzip(zip_file2, exdir = unzip_dir)
+annotation1_read <- read.table("internal_data/annotation_part1.txt", sep = "\t", header = TRUE)
+annotation2_read <- read.table("internal_data/annotation_part2.txt", sep = "\t", header = TRUE)
+annotation<- rbind(annotation1_read, annotation2_read)
