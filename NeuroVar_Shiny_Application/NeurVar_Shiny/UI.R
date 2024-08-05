@@ -13,7 +13,6 @@ UI <- shinyUI({
     tabPanel("Biomarker",
              sidebarLayout(
                sidebarPanel(
-                 # 1. choose disease
                  selectInput(inputId ="disease_n",
                              label = "Select the disease of interest:",
                              choices = c(unique(full_list$disease), "N/A"),
@@ -32,10 +31,6 @@ UI <- shinyUI({
                  )
                ),
                mainPanel(
-                 # 1. biomarkers list table
-                 
-                 #  2. info about gene
-                 
                  box(h2("About the gene"),width=12,
                      DT::dataTableOutput("gene_infos")
                  ),
@@ -68,12 +63,12 @@ UI <- shinyUI({
                  h3("Note: Make Sure the disease is selected in the firs tab ! "),
                  
                  # filters p val log fc
-                 h4("Define the p-value and LogFC value to identify the differentially expressed genes"),
+                 h4("Define the adjusted p-value and LogFC value to identify the differentially expressed genes"),
                  sliderInput("pval",
-                             "P_value:",
+                             "Adjusted P_value:",
                              min = 0,
-                             max = 1,
-                             value=0.05
+                             max = 0.05,
+                             value=0.01
                  ),
                  br(),
                  br(),
