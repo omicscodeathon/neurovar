@@ -1,11 +1,16 @@
 # NeuroVar: A Genetic Expression and Variation data visualization tool for Neurological diseases’ biomarkers
 
+<p align="center">
+  <img src="https://raw.githubusercontent.com/HibaBenAribi/NeuroVar/main/neurovar-logo.png" alt="neurovar logo" width="300"  />
+</p>
+
 ## Table of Contents
 1. [Background](#Background)
 2. [About NeuroVar](#About-NeuroVar)
-3. [Usage Guidelines](#Usage_Guidelines)
-4. [Citation](#Citation)
-5. [Contributors](#Contributors)
+3. [Demonstration Video](#Demonstration_Video)
+4. [Usage Guidelines](#Usage_Guidelines)
+5. [Citation](#Citation)
+6. [Contributors](#Contributors)
 <br>
 
 ## Background
@@ -41,6 +46,13 @@ The current version includes :
               ★ Hearing Loss 
               ★ Fatty Acid Oxidation Disorders
 
+## Demonstration Video
+
+<p align="center">
+  <a href="https://www.youtube.com/watch?v=cYZ8WOvabJs">
+    <img src="https://img.youtube.com/vi/cYZ8WOvabJs/0.jpg" alt="neurovar" width="700" />
+  </a>
+</p>
 
 ## Usage Guidelines
 
