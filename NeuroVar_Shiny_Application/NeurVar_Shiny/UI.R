@@ -60,7 +60,7 @@ UI <- shinyUI({
                  selectInput("col3", "Select LogFC Column", ""),
                  
                  # filters p val log fc
-                 h3("Note: Make Sure the disease is selected in the firs tab ! "),
+                 h3("Note: Make Sure the disease is selected in the first tab ! "),
                  
                  # filters p val log fc
                  h4("Define the adjusted p-value and LogFC value to identify the differentially expressed genes"),
