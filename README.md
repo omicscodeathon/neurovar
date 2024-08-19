@@ -1,7 +1,7 @@
 # NeuroVar: A Genetic Expression and Variation data visualization tool for Neurological diseases’ biomarkers
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/HibaBenAribi/NeuroVar/main/neurovar-logo.png" alt="neurovar logo" width="300"  />
+  <img src="https://github.com/omicscodeathon/neurovar/blob/main/assests/neurovar-logo.png?raw=true" alt="neurovar logo" width="300"  />
 </p>
 
 ## Table of Contents
@@ -50,7 +50,7 @@ The current version includes :
 
 <p align="center">
   <a href="https://www.youtube.com/watch?v=cYZ8WOvabJs">
-    <img src="https://img.youtube.com/vi/cYZ8WOvabJs/0.jpg" alt="neurovar" width="700" />
+    <img src="https://github.com/omicscodeathon/neurovar/blob/main/assests/neurovar_yt.png?raw=true" alt="neurovar" width="700" />
   </a>
 </p>
 
