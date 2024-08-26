@@ -82,6 +82,8 @@ Source Code :  [Click Here](https://github.com/omicscodeathon/neurovar/tree/main
 
 Source Code :  [Click Here](https://github.com/omicscodeathon/neurovar/blob/main/NeuroVar_Desktop_Application/NeuroVar_app.py)    
 
+<br>
+<br>
 
 The tool is also registered at SciCrunch.org. 
  
