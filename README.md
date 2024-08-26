@@ -111,7 +111,7 @@ The tool is also registered at SciCrunch.org.
 
 ## Citation
 
-Hiba Ben Aribi, Najla Abassi and Olaitan I. Awe. NeuroVar: A Genetic Expression and Variation data visualization tool for Neurological diseases’ biomarkers. https://github.com/omicscodeathon/neurovar. RRID: SCR_025640.
+Hiba Ben Aribi, Najla Abassi and Olaitan I. Awe. NeuroVar: A Genetic Expression and Variation data visualization tool for Neurological diseases’ biomarkers. Zenodo. https://doi.org/10.5281/zenodo.13375646.  RRID: SCR_025640. 
 
 
 
