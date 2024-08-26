@@ -71,7 +71,9 @@ Guide :  [Click Here](https://github.com/omicscodeathon/neurovar/tree/main/Neuro
 
 ## Citation
 
-Hiba Ben Aribi, Najla Abassi and Olaitan I. Awe. NeuroVar: A Genetic Expression and Variation data visualization tool for Neurological diseases’ biomarkers https://github.com/omicscodeathon/neurovar
+Hiba Ben Aribi, Najla Abassi and Olaitan I. Awe. NeuroVar: A Genetic Expression and Variation data visualization tool for Neurological diseases’ biomarkers. https://github.com/omicscodeathon/neurovar
+
+**RRID:** SCR_025640
 
 ## Contributors
 
