@@ -71,7 +71,9 @@ In the third tab,  define the path to the directory containing the genetic varia
 ![Figure 3 indel](https://github.com/omicscodeathon/neurovar/assets/73958439/a886405a-8282-4624-8f4c-edeedd7f517c)
 
 
-#### Demonstration Data
+#### Demonstration Data 
+
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.13375590.svg)](https://doi.org/10.5281/zenodo.13375590)
 
 Demonstration data are provided [here](https://github.com/omicscodeathon/neurovar/tree/main/demonstration_data)
 
