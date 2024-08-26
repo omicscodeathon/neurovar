@@ -14,7 +14,7 @@
 3. [Demonstration Video](#Demonstration_Video)
 4. [Usage Guidelines](#Usage_Guidelines)
 5. [Code availability](#Code_availability)
-6. [Licence](#Licence)
+6. [License](#License)
 8. [Citation](#Citation)
 9. [Contributors](#Contributors)
 <br>
@@ -105,8 +105,8 @@ The tool is also registered at SciCrunch.org.
 **RRID:** SCR_025640
 
 
-## Licence
-**Licence :** Artistic license 2.0 
+## License
+**License :** Artistic license 2.0 
 
 
 ## Citation
