@@ -2,6 +2,11 @@
 
 [![License: Artistic-2.0](https://img.shields.io/badge/License-Artistic_2.0-0298c3.svg)](https://opensource.org/licenses/Artistic-2.0)
 
+
+
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.13375646.svg)](https://doi.org/10.5281/zenodo.13375646)
+
+
 <p align="center">
   <img src="https://github.com/omicscodeathon/neurovar/blob/main/assests/neurovar-logo.png?raw=true" alt="neurovar logo" width="300"  />
 </p>
@@ -75,10 +80,15 @@ Guide :  [Click Here](https://github.com/omicscodeathon/neurovar/tree/main/Neuro
 The code if the two versions are available open source.
 
 1. Shiny application
+   
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.13375492.svg)](https://doi.org/10.5281/zenodo.13375492)
+
 
 Source Code :  [Click Here](https://github.com/omicscodeathon/neurovar/tree/main/NeuroVar_Shiny_Application/NeurVar_Shiny)     
  
 2. Desktop application
+
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.13375578.svg)](https://doi.org/10.5281/zenodo.13375578)
 
 Source Code :  [Click Here](https://github.com/omicscodeathon/neurovar/blob/main/NeuroVar_Desktop_Application/NeuroVar_app.py)    
 
