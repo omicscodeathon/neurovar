@@ -1,5 +1,7 @@
 # NeuroVar: A Genetic Expression and Variation data visualization tool for Neurological diseases’ biomarkers
 
+[![License: Artistic-2.0](https://img.shields.io/badge/License-Artistic_2.0-0298c3.svg)](https://opensource.org/licenses/Artistic-2.0)
+
 <p align="center">
   <img src="https://github.com/omicscodeathon/neurovar/blob/main/assests/neurovar-logo.png?raw=true" alt="neurovar logo" width="300"  />
 </p>
