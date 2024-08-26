@@ -11,8 +11,10 @@
 2. [About NeuroVar](#About-NeuroVar)
 3. [Demonstration Video](#Demonstration_Video)
 4. [Usage Guidelines](#Usage_Guidelines)
-5. [Citation](#Citation)
-6. [Contributors](#Contributors)
+5. [Code availability](#Code_availability)
+6. [Licence](#Licence)
+8. [Citation](#Citation)
+9. [Contributors](#Contributors)
 <br>
 
 ## Background
@@ -68,12 +70,33 @@ Guide :  [Click Here](https://github.com/omicscodeathon/neurovar/edit/main/Neuro
 
 Guide :  [Click Here](https://github.com/omicscodeathon/neurovar/tree/main/NeuroVar_Desktop_Application)      
  
+## Code availability
+
+The code if the two versions are available open source.
+
+1. Shiny application
+
+Source Code :  [Click Here](https://github.com/omicscodeathon/neurovar/tree/main/NeuroVar_Shiny_Application/NeurVar_Shiny)     
+ 
+2. Desktop application
+
+Source Code :  [Click Here](https://github.com/omicscodeathon/neurovar/blob/main/NeuroVar_Desktop_Application/NeuroVar_app.py)    
+
+
+The tool is also registered at SciCrunch.org. 
+ 
+**RRID:** SCR_025640
+
+
+## Licence
+**Licence :** Artistic license 2.0 
+
 
 ## Citation
 
-Hiba Ben Aribi, Najla Abassi and Olaitan I. Awe. NeuroVar: A Genetic Expression and Variation data visualization tool for Neurological diseases’ biomarkers. https://github.com/omicscodeathon/neurovar
+Hiba Ben Aribi, Najla Abassi and Olaitan I. Awe. NeuroVar: A Genetic Expression and Variation data visualization tool for Neurological diseases’ biomarkers. https://github.com/omicscodeathon/neurovar. RRID: SCR_025640.
 
-**RRID:** SCR_025640
+
 
 ## Contributors
 
