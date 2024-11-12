@@ -30,26 +30,26 @@ The current version includes :
 
 * 11 Neurological Syndromes are integrated, including:
 
-              ★ Epilepsy 
-              ★ Amyotrophic lateral sclerosis 
-              ★ Intellectual disability and Autism spectrum disorder 
-              ★ Brain malformation syndrome 
-              ★ Syndromic Disorders 
-              ★ Cerebral Palsy 
-              ★ RASopathy 
-              ★ Aminoacidopathy 
-              ★ CranioFacial Malformations 
-              ★ Parkinson disease 
-              ★ PHARC syndrome 
+              ★ Epilepsy
+              ★ Amyotrophic lateral sclerosis
+              ★ Intellectual disability and Autism spectrum disorder
+              ★ Brain malformation syndrome
+              ★ Syndromic Disorders
+              ★ Cerebral Palsy
+              ★ RASopathy
+              ★ Aminoacidopathy
+              ★ CranioFacial Malformations
+              ★ Parkinson disease
+              ★ PHARC syndrome
 
 * and 7 Non-Neurological diseases with neurological manifestations are integrated, including:
 
               ★ Peroxisomal disorders  
-              ★ Hereditary cancer 
-              ★ Mitochondrial disease 
-              ★ Retina-related disorders 
+              ★ Hereditary cancer
+              ★ Mitochondrial disease
+              ★ Retina-related disorders
               ★ General Gene Curation
-              ★ Hearing Loss 
+              ★ Hearing Loss
               ★ Fatty Acid Oxidation Disorders
 
 ## Demonstration Video
@@ -67,12 +67,12 @@ NeuroVar is available as a Shiny Application and a desktop application.
 1. Shiny application
 
 Guide :  [Click Here](https://github.com/omicscodeathon/neurovar/edit/main/NeuroVar_Shiny_Application)     
- 
+
 2. Desktop application
 
 Guide :  [Click Here](https://github.com/omicscodeathon/neurovar/tree/main/NeuroVar_Desktop_Application)      
 
-#### Demonstration Data 
+#### Demonstration Data
 
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.13375590.svg)](https://doi.org/10.5281/zenodo.13375590)
 
@@ -85,12 +85,12 @@ This data will guide you to organize your data correctly and could be used to te
 The code if the two versions are available open source.
 
 1. Shiny application
-   
+
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.13375492.svg)](https://doi.org/10.5281/zenodo.13375492)
 
 
 Source Code :  [Click Here](https://github.com/omicscodeathon/neurovar/tree/main/NeuroVar_Shiny_Application/NeurVar_Shiny)     
- 
+
 2. Desktop application
 
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.13375578.svg)](https://doi.org/10.5281/zenodo.13375578)
@@ -100,25 +100,29 @@ Source Code :  [Click Here](https://github.com/omicscodeathon/neurovar/blob/main
 <br>
 <br>
 
-The tool is also registered at SciCrunch.org. 
- 
+The tool is also registered at SciCrunch.org.
+
 **RRID:** SCR_025640
 
 
 ## License
-**License :** Artistic license 2.0 
+**License :** Artistic license 2.0
 
 
 ## Citation
 
-Hiba Ben Aribi, Najla Abassi and Olaitan I. Awe. NeuroVar: A Genetic Expression and Variation data visualization tool for Neurological diseases’ biomarkers. Zenodo. https://doi.org/10.5281/zenodo.13375646.  RRID: SCR_025640. 
+Hiba Ben Aribi, Najla Abassi and Olaitan I. Awe. NeuroVar: A Genetic Expression and Variation data visualization tool for Neurological diseases’ biomarkers. Zenodo. https://doi.org/10.5281/zenodo.13375646.  RRID: SCR_025640.
 
+## Reporting Issues
+To report an issue please use the issues page (https://github.com/omicscodeathon/neurovar/issues). Please check existing issues before submitting a new one.
 
+## Contribute to Project
+You can offer to help with the further development of this project by making pull requests on this repo. To do so, fork this repository and make the proposed changes. Once completed and tested, submit a pull request to this repo.
 
 ## Contributors
 
 Hiba Ben Aribi,  Faculty of Sciences of Tunis, University of Tunis El Manar, Tunis, Tunisia  (Developer - Writer).
 
-Najla Abassi, Pasteur Institute of Tunis,, Tunisia  (Developer - Writer).
+Najla Abassi, Pasteur Institute of Tunis, Tunisia  (Developer - Writer).
 
-Olaitan I. Awe, African Society for Bioinformatics and Computational Biology (ASBCB), South Africa.
+Olaitan I. Awe, African Society for Bioinformatics and Computational Biology (ASBCB), Cape Town, South Africa.
